@@ -853,6 +853,11 @@
     }
 
     .scroll-reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .js-enhanced .scroll-reveal {
       opacity: 0;
       transform: translateY(22px);
       transition:
@@ -860,7 +865,7 @@
         transform 700ms ease;
     }
 
-    .scroll-reveal.visible {
+    .js-enhanced .scroll-reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -999,10 +1004,18 @@
       }
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 640px) {
       .topbar {
         position: static;
+        display: grid;
+        gap: 0.75rem;
         border-radius: 24px;
+        padding: 0.9rem;
+      }
+
+      .brand {
+        font-size: 0.88rem;
+        letter-spacing: 0.06em;
       }
 
       .brand,
@@ -1010,13 +1023,47 @@
         width: 100%;
       }
 
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.5rem;
+      }
+
       .nav a {
-        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.5rem;
+        padding: 0.45rem 0.5rem;
+        border: 1px solid rgba(16, 32, 51, 0.08);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.4);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      .hero {
+        gap: 1rem;
+      }
+
+      .hero-card {
+        padding: 1.35rem;
       }
 
       .hero h1 {
-        font-size: clamp(2.35rem, 13vw, 3.3rem);
-        line-height: 1;
+        font-size: clamp(2.4rem, 13vw, 3.6rem);
+        line-height: 0.98;
+      }
+
+      .headline-strip {
+        font-size: 0.95rem;
+        letter-spacing: 0.05em;
+      }
+
+      .hero-kicker,
+      .cta-row {
+        display: grid;
+        gap: 0.7rem;
       }
 
       .headline-strip,
@@ -1024,11 +1071,29 @@
         font-size: 1rem;
       }
 
+      .live-pill,
+      .signal-chip,
+      .button,
+      .button-secondary {
+        width: 100%;
+      }
+
+      .button,
+      .button-secondary {
+        justify-content: center;
+      }
+
       .signal-row,
-      .terminal-line,
       .section-heading {
         display: grid;
         gap: 0.5rem;
+      }
+
+      .terminal-line {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: start;
+        gap: 0.45rem;
       }
 
       .signal-row,
@@ -1043,6 +1108,58 @@
       .contact-link,
       .project-link {
         display: inline;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .page-shell {
+        width: min(var(--max-width), calc(100% - 0.75rem));
+        padding-top: 0.75rem;
+      }
+
+      .topbar,
+      .hero-card,
+      .panel,
+      .profile-card,
+      .focus-card,
+      .timeline-item,
+      .project-card,
+      .contact-card,
+      .project-placeholder,
+      .stat {
+        border-radius: 22px;
+      }
+
+      .topbar {
+        padding: 0.8rem;
+      }
+
+      .nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-card,
+      .panel,
+      .profile-card,
+      .focus-card,
+      .timeline-item,
+      .project-card,
+      .contact-card,
+      .project-placeholder,
+      .stat {
+        padding: 1.1rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.85rem, 14vw, 2.7rem);
+      }
+
+      .eyebrow {
+        margin-bottom: 0.9rem;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(1.8rem, 11vw, 2.4rem);
       }
     }
 
@@ -1483,6 +1600,8 @@
   </div>
   <script>
     (() => {
+      document.documentElement.classList.add("js-enhanced");
+
       const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const roleRotator = document.getElementById("role-rotator");
       const roles = ["Kubernetes", "Cloud-native", "Quality Engineering", "AI / MCP"];
