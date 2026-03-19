@@ -936,21 +936,31 @@
       .project-grid,
       .contact-grid,
       .section-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-grid > * {
+        min-width: 0;
       }
 
       .profile-card,
       .focus-card,
+      .stats,
       .section-heading,
       .timeline,
       .project-placeholder,
       .project-grid,
       .contact-grid {
-        grid-column: span 1;
+        grid-column: 1 / -1;
+        width: 100%;
       }
 
       .timeline-item {
         grid-template-columns: 1fr;
+      }
+
+      .section-heading p {
+        max-width: none;
       }
 
       .timeline-item::before {
