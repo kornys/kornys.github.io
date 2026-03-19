@@ -157,6 +157,7 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      min-width: 0;
     }
 
     .nav {
@@ -164,6 +165,7 @@
       gap: 1.1rem;
       flex-wrap: wrap;
       justify-content: flex-end;
+      min-width: 0;
     }
 
     .nav a {
@@ -499,12 +501,14 @@
       font-size: 0.95rem;
       font-weight: 600;
       letter-spacing: 0.01em;
+      min-width: 0;
     }
 
     .signal-row span {
       color: rgba(237, 246, 255, 0.68);
       font-size: 0.88rem;
       text-align: right;
+      min-width: 0;
     }
 
     .terminal-card {
@@ -543,6 +547,7 @@
 
     .terminal-line .text {
       color: var(--muted);
+      min-width: 0;
     }
 
     .terminal-line.active .text::after {
@@ -815,6 +820,7 @@
       margin-top: 1rem;
       color: var(--accent-deep);
       font-weight: 600;
+      overflow-wrap: anywhere;
     }
 
     .project-link:hover,
@@ -829,6 +835,7 @@
       margin-top: 1rem;
       color: var(--accent-deep);
       font-weight: 600;
+      overflow-wrap: anywhere;
     }
 
     .contact-link:hover,
@@ -957,6 +964,7 @@
       }
 
       .topbar {
+        align-items: flex-start;
         border-radius: 28px;
         padding: 1rem;
       }
@@ -979,6 +987,7 @@
 
       .nav {
         gap: 0.75rem;
+        justify-content: flex-start;
       }
 
       .hero-kicker {
@@ -987,6 +996,53 @@
 
       .identity-header {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        position: static;
+        border-radius: 24px;
+      }
+
+      .brand,
+      .nav {
+        width: 100%;
+      }
+
+      .nav a {
+        font-size: 0.9rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 13vw, 3.3rem);
+        line-height: 1;
+      }
+
+      .headline-strip,
+      .lede {
+        font-size: 1rem;
+      }
+
+      .signal-row,
+      .terminal-line,
+      .section-heading {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .signal-row,
+      .terminal-line {
+        justify-items: start;
+      }
+
+      .signal-row span {
+        text-align: left;
+      }
+
+      .contact-link,
+      .project-link {
+        display: inline;
       }
     }
 
