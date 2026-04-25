@@ -4,63 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David Kornel | DevOps, Developer, Quality Engineer</title>
-  <meta
-    name="description"
-    content="Professional personal page for David Kornel, focused on DevOps, software development, quality engineering, Kubernetes, and delivery automation."
-  >
-  <meta name="theme-color" content="#dbe8f4">
+  <meta name="description" content="Personal site for David Kornel — DevOps-minded software engineer focused on Kubernetes, quality engineering, delivery automation, and cloud-native systems.">
+  <meta name="theme-color" content="#0b1220">
   <meta property="og:title" content="David Kornel | DevOps, Developer, Quality Engineer">
-  <meta
-    property="og:description"
-    content="Professional personal page for David Kornel, focused on DevOps, software development, quality engineering, Kubernetes, and delivery automation."
-  >
+  <meta property="og:description" content="I design reliable delivery systems and ship quality at speed across Kubernetes and OpenShift environments.">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/11318335?v=4">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kornys.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="David Kornel | DevOps, Developer, Quality Engineer">
+  <meta name="twitter:description" content="Open-source and platform engineering profile with a focus on DevOps, quality, and automation.">
+  <link rel="canonical" href="https://kornys.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #dbe8f4;
-      --surface: rgba(246, 251, 255, 0.82);
-      --surface-strong: #fbfdff;
-      --ink: #102033;
-      --muted: #4d6175;
-      --line: rgba(16, 32, 51, 0.12);
-      --accent: #007f73;
-      --accent-deep: #005f57;
-      --accent-soft: rgba(0, 127, 115, 0.12);
-      --cool: #224d7a;
-      --glow: rgba(0, 127, 115, 0.24);
-      --shadow: 0 24px 60px rgba(28, 53, 79, 0.14);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --max-width: 1160px;
-      --spot-x: 50%;
-      --spot-y: 20%;
+      color-scheme: light;
+      --bg: #edf3fb;
+      --bg-elev: rgba(255, 255, 255, 0.66);
+      --surface: rgba(255, 255, 255, 0.84);
+      --ink: #0f1d33;
+      --muted: #53637b;
+      --line: rgba(15, 29, 51, 0.14);
+      --accent: #00a388;
+      --accent-2: #2f6bc2;
+      --accent-soft: rgba(0, 163, 136, 0.12);
+      --shadow: 0 20px 60px rgba(25, 48, 78, 0.16);
+      --radius: 22px;
+      --maxw: 1180px;
+      --spot-x: 45%;
+      --spot-y: 18%;
     }
 
-    * {
-      box-sizing: border-box;
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #07101f;
+      --bg-elev: rgba(10, 18, 34, 0.72);
+      --surface: rgba(10, 19, 35, 0.84);
+      --ink: #ebf2ff;
+      --muted: #9fb0c9;
+      --line: rgba(235, 242, 255, 0.14);
+      --accent: #18c8ac;
+      --accent-2: #70a3ff;
+      --accent-soft: rgba(24, 200, 172, 0.15);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "IBM Plex Sans", sans-serif;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
       color: var(--ink);
-      overflow-x: hidden;
       background:
-        radial-gradient(circle at top left, rgba(0, 127, 115, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(34, 77, 122, 0.22), transparent 22%),
-        linear-gradient(180deg, #edf5fb 0%, #dce9f4 100%);
+        radial-gradient(circle at 0% 0%, rgba(24, 200, 172, 0.24), transparent 26%),
+        radial-gradient(circle at 90% 5%, rgba(47, 107, 194, 0.24), transparent 22%),
+        var(--bg);
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -68,1566 +70,547 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background-image:
-        linear-gradient(rgba(16, 32, 51, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(16, 32, 51, 0.04) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 80%);
-      opacity: 0.35;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(255, 255, 255, 0.58), transparent 18%),
-        radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(0, 127, 115, 0.14), transparent 32%);
-      opacity: 0.8;
       z-index: 0;
+      background:
+        radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(255, 255, 255, 0.55), transparent 12%),
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: auto, 30px 30px, 30px 30px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 88%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a { color: inherit; text-decoration: none; }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: #000;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      z-index: 100;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    .skip-link:focus { left: 0.75rem; top: 0.75rem; border-radius: 12px; }
 
-    .page-shell {
-      width: min(var(--max-width), calc(100% - 2rem));
+    .shell {
+      width: min(var(--maxw), calc(100% - 2rem));
       margin: 0 auto;
-      padding: 1.25rem 0 4rem;
+      padding: 1.1rem 0 4rem;
       position: relative;
       z-index: 1;
     }
 
-    .ambient-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(6px);
-      opacity: 0.65;
-      pointer-events: none;
-      z-index: 0;
-      animation: float 14s ease-in-out infinite;
-    }
-
-    .ambient-orb.one {
-      width: 210px;
-      height: 210px;
-      top: 5.5rem;
-      right: 6%;
-      background: radial-gradient(circle, rgba(0, 127, 115, 0.28), transparent 68%);
-    }
-
-    .ambient-orb.two {
-      width: 300px;
-      height: 300px;
-      top: 22rem;
-      left: -6rem;
-      background: radial-gradient(circle, rgba(34, 77, 122, 0.24), transparent 70%);
-      animation-delay: -4s;
-    }
-
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: sticky;
+      top: 0.9rem;
+      z-index: 40;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       gap: 1rem;
-      padding: 0.85rem 1rem;
-      margin: 0 auto 1.5rem;
+      align-items: center;
+      padding: 0.7rem 0.9rem;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(247, 251, 255, 0.74);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 10px 30px rgba(30, 63, 95, 0.1);
-      animation: slide-down 700ms ease-out both;
-      position: sticky;
-      top: 1rem;
-      z-index: 20;
+      background: var(--bg-elev);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+      margin-bottom: 1.3rem;
     }
 
     .brand {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
+      font-size: 0.9rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      min-width: 0;
+      font-weight: 700;
     }
 
-    .nav {
-      display: flex;
-      gap: 1.1rem;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      min-width: 0;
-    }
+    .nav { display: flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; }
+    .nav a { color: var(--muted); font-weight: 500; }
+    .nav a:hover, .nav a:focus-visible { color: var(--accent); }
 
-    .nav a {
-      font-size: 0.95rem;
-      color: var(--muted);
-      transition: color 180ms ease;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      color: var(--accent-deep);
+    .theme-toggle {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: var(--ink);
+      padding: 0.55rem 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-      gap: 1.5rem;
-      align-items: stretch;
-      margin-bottom: 1.5rem;
-      position: relative;
+      grid-template-columns: minmax(0,1.15fr) minmax(310px,0.85fr);
+      gap: 1.1rem;
+      margin-bottom: 1.2rem;
     }
 
-    .hero-card,
-    .panel,
-    .timeline-item,
-    .stat,
-    .project-placeholder,
-    .project-card,
-    .contact-card {
+    .card {
       border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
+      border-radius: var(--radius);
       background: var(--surface);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
       box-shadow: var(--shadow);
     }
 
-    .hero-card {
-      padding: 3rem;
+    .hero-main {
+      padding: 2.4rem;
       position: relative;
       overflow: hidden;
-      animation: rise 800ms ease-out both;
       background:
-        linear-gradient(140deg, rgba(249, 253, 255, 0.94), rgba(235, 245, 251, 0.78)),
+        radial-gradient(circle at 90% 0%, rgba(47, 107, 194, 0.16), transparent 36%),
+        linear-gradient(145deg, rgba(255,255,255,0.7), transparent 34%),
         var(--surface);
     }
 
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      right: -70px;
-      bottom: -80px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--glow) 0%, transparent 72%);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(120deg, rgba(255, 255, 255, 0.52), transparent 36%),
-        radial-gradient(circle at 82% 18%, rgba(34, 77, 122, 0.16), transparent 28%);
-      pointer-events: none;
+    .hero-main h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -0.03em;
     }
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.45rem 0.8rem;
+      padding: 0.4rem 0.75rem;
       border-radius: 999px;
+      border: 1px solid var(--line);
       background: var(--accent-soft);
-      color: var(--accent-deep);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      color: var(--accent);
+      font-size: 0.78rem;
       text-transform: uppercase;
-      margin-bottom: 1.1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1,
-    .section-heading h2 {
-      margin: 0;
-      font-family: "Space Grotesk", sans-serif;
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      max-width: 10ch;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 span {
-      color: var(--accent-deep);
-    }
-
-    .headline-strip {
-      margin: 1rem 0 0;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1rem, 2vw, 1.35rem);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--cool);
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-kicker {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.7rem;
-      margin-top: 1.4rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .live-pill,
-    .signal-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.55rem 0.85rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.64);
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .live-dot {
-      width: 0.55rem;
-      height: 0.55rem;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 0 rgba(0, 127, 115, 0.44);
-      animation: pulse 1.8s infinite;
-    }
-
-    .role-rotator {
-      min-width: 11ch;
-      color: var(--cool);
+      letter-spacing: 0.09em;
       font-weight: 700;
-    }
-
-    .lede {
-      max-width: 42rem;
-      margin: 1.4rem 0 0;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: var(--muted);
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .button,
-    .button-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition:
-        transform 180ms ease,
-        box-shadow 180ms ease,
-        border-color 180ms ease,
-        background 180ms ease;
-    }
-
-    .button {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(0, 95, 87, 0.24);
-    }
-
-    .button-secondary {
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.55);
-      color: var(--ink);
-    }
-
-    .button:hover,
-    .button-secondary:hover,
-    .button:focus-visible,
-    .button-secondary:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 1rem;
-      animation: rise 1000ms ease-out both;
-    }
-
-    .hero-stack {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(17, 33, 53, 0.97), rgba(11, 22, 37, 0.99));
-      color: #edf6ff;
-    }
-
-    .hero-stack::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(0, 127, 115, 0.26), transparent 28%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 38%);
-      pointer-events: none;
-    }
-
-    .hero-stack h2,
-    .hero-stack p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-stack p {
-      color: rgba(237, 246, 255, 0.78);
-    }
-
-    .identity-panel {
-      display: grid;
-      gap: 1.2rem;
-    }
-
-    .identity-header {
-      display: grid;
-      grid-template-columns: 96px minmax(0, 1fr);
-      gap: 1rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 24px;
-      object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .identity-copy h2 {
-      margin: 0;
-    }
-
-    .identity-copy p {
-      margin-top: 0.5rem;
-    }
-
-    .fact-list,
-    .social-row,
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-    }
-
-    .fact-list,
-    .social-row {
-      position: relative;
-      z-index: 1;
-    }
-
-    .fact-chip,
-    .social-link,
-    .project-meta span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.55rem 0.82rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.06);
-      color: rgba(237, 246, 255, 0.84);
-    }
-
-    .social-link {
-      border-color: rgba(255, 255, 255, 0.12);
-      transition:
-        transform 180ms ease,
-        background 180ms ease;
-    }
-
-    .social-link:hover,
-    .social-link:focus-visible {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .signal-board {
-      margin-top: 1.2rem;
-      display: grid;
-      gap: 0.8rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .signal-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
-      align-items: center;
-      padding: 0.85rem 0.95rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .signal-row strong {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      min-width: 0;
-    }
-
-    .signal-row span {
-      color: rgba(237, 246, 255, 0.68);
-      font-size: 0.88rem;
-      text-align: right;
-      min-width: 0;
-    }
-
-    .terminal-card {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(250, 253, 255, 0.9), rgba(236, 244, 250, 0.78));
-    }
-
-    .terminal-bar {
-      display: flex;
-      gap: 0.45rem;
       margin-bottom: 1rem;
     }
 
-    .terminal-bar span {
-      width: 0.72rem;
-      height: 0.72rem;
-      border-radius: 50%;
-      background: rgba(16, 32, 51, 0.16);
-    }
+    .hero-main h1 { font-size: clamp(2.2rem, 7vw, 4.8rem); line-height: 0.94; max-width: 12ch; }
+    .hero-main h1 span { color: var(--accent); }
+    .headline { margin-top: 1rem; color: var(--accent-2); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .lede { margin: 1rem 0 0; color: var(--muted); max-width: 42rem; line-height: 1.7; }
 
-    .terminal-line {
-      display: flex;
-      gap: 0.7rem;
-      margin-top: 0.8rem;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 0.92rem;
-      color: var(--ink);
-    }
-
-    .terminal-line .prompt {
-      color: var(--accent-deep);
-      flex: 0 0 auto;
-    }
-
-    .terminal-line .text {
-      color: var(--muted);
-      min-width: 0;
-    }
-
-    .terminal-line.active .text::after {
-      content: "";
-      display: inline-block;
-      width: 0.58rem;
-      height: 1em;
-      margin-left: 0.25rem;
-      background: rgba(16, 32, 51, 0.7);
-      vertical-align: -0.12em;
-      animation: blink 1s steps(1) infinite;
-    }
-
-    .panel {
-      padding: 1.5rem;
-    }
-
-    .panel h2,
-    .panel h3,
-    .project-card h3,
-    .contact-card h3,
-    .timeline-item h3,
-    .project-placeholder h3 {
-      margin: 0 0 0.75rem;
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: -0.03em;
-    }
-
-    .panel p,
-    .timeline-item p,
-    .project-placeholder p,
-    .footer p {
-      margin: 0;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .badge-list,
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1rem;
-    }
-
-    .badge-list {
-      position: relative;
-      z-index: 1;
-    }
-
-    .badge,
-    .chip {
-      padding: 0.55rem 0.8rem;
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.82rem 1.1rem;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.58);
-      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
-    main {
-      display: grid;
-      gap: 1.5rem;
-    }
+    .btn.primary { background: var(--accent); color: #fff; border-color: transparent; }
+    .btn.secondary { color: var(--ink); background: rgba(255,255,255,0.35); }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
 
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .section-heading {
-      grid-column: span 12;
+    .proof-strip {
+      margin-top: 1.3rem;
       display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 0.55rem;
     }
 
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-    }
-
-    .section-heading p {
-      max-width: 36rem;
-      margin: 0;
+    .proof-chip {
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.84rem;
       color: var(--muted);
-      line-height: 1.7;
+      background: rgba(255,255,255,0.35);
     }
 
-    .profile-card {
-      grid-column: span 7;
-      padding: 2rem;
+    .hero-side { display: grid; gap: 1rem; }
+    .profile { padding: 1.2rem; }
+
+    .identity { display: grid; grid-template-columns: 92px 1fr; gap: 0.9rem; align-items: center; }
+    .avatar { width: 92px; height: 92px; border-radius: 20px; object-fit: cover; border: 1px solid var(--line); }
+    .profile p { margin: 0.55rem 0 0; color: var(--muted); line-height: 1.65; }
+
+    .badge-row { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.55rem; }
+    .badge {
+      font-size: 0.8rem;
+      padding: 0.42rem 0.68rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.25);
+      color: var(--muted);
     }
 
-    .focus-card {
-      grid-column: span 5;
-      padding: 2rem;
-      background:
-        linear-gradient(180deg, rgba(34, 77, 122, 0.92), rgba(16, 44, 72, 0.97)),
-        var(--surface);
-      color: #edf6ff;
+    .cmd {
+      padding: 1.2rem;
+      background: linear-gradient(180deg, rgba(8,18,34,0.95), rgba(8,16,27,0.98));
+      color: #d7e4ff;
+      border: 1px solid rgba(215,228,255,0.13);
     }
 
-    .focus-card p,
-    .focus-card li {
-      color: rgba(237, 246, 255, 0.84);
-    }
+    .cmd p { margin: 0.6rem 0 0; color: rgba(215,228,255,0.82); }
+    .cmd .line { margin-top: 0.5rem; color: rgba(215,228,255,0.92); font-family: "Space Grotesk", sans-serif; }
+    .prompt { color: #5de7cf; margin-right: 0.35rem; }
 
-    .focus-list {
-      padding: 0;
-      margin: 1rem 0 0;
-      list-style: none;
+    main { display: grid; gap: 1.2rem; }
+
+    .wins {
       display: grid;
-      gap: 0.9rem;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      gap: 0.8rem;
     }
 
-    .focus-list li {
-      padding-left: 1rem;
-      border-left: 2px solid rgba(237, 246, 255, 0.24);
-    }
+    .win { padding: 1.2rem; }
+    .win strong { display: block; font-size: 1.9rem; font-family: "Space Grotesk", sans-serif; }
+    .win span { color: var(--accent); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+    .win p { margin: 0.45rem 0 0; color: var(--muted); line-height: 1.6; }
 
-    .stats {
-      grid-column: span 12;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .stat {
+    .section {
       padding: 1.5rem;
-      animation: rise 1000ms ease-out both;
-      position: relative;
-      overflow: hidden;
     }
 
-    .stat::before {
-      content: "";
-      position: absolute;
-      inset: auto -10% -40% auto;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 127, 115, 0.14), transparent 70%);
+    .section h2 { font-size: clamp(1.6rem, 4vw, 3rem); }
+    .section > p { margin: 0.65rem 0 0.95rem; color: var(--muted); line-height: 1.7; max-width: 56rem; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0.8rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0.8rem; }
+
+    .project, .contact, .timeline-item, .spotlight { padding: 1.1rem; }
+    .project h3, .contact h3, .timeline-item h3, .spotlight h3 { font-size: 1.25rem; }
+    .project p, .contact p, .timeline-item p, .spotlight p { margin: 0.55rem 0 0; color: var(--muted); line-height: 1.65; }
+
+    .meta { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-top: 0.75rem; }
+    .meta span { border: 1px solid var(--line); border-radius: 999px; padding: 0.38rem 0.62rem; color: var(--muted); font-size: 0.8rem; }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.75rem 0.9rem;
+      background: rgba(255,255,255,0.23);
+      margin-top: 0.7rem;
     }
 
-    .stat strong {
-      display: block;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 2rem;
-      margin-bottom: 0.35rem;
-      position: relative;
-      z-index: 1;
-    }
+    summary { cursor: pointer; font-weight: 700; color: var(--ink); }
 
-    .stat p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .timeline {
-      grid-column: span 12;
-      display: grid;
-      gap: 1rem;
-    }
+    .timeline-wrap { display: grid; gap: 0.7rem; }
 
     .timeline-item {
-      padding: 1.75rem 2rem;
-      display: grid;
-      grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-      position: relative;
-      overflow: hidden;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.9rem;
     }
 
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 1.3rem;
-      bottom: 1.3rem;
-      width: 4px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, var(--accent), rgba(34, 77, 122, 0.94));
+    .now-list { margin: 0.6rem 0 0; padding-left: 1.15rem; color: var(--muted); line-height: 1.75; }
+
+    .footer { text-align: center; color: var(--muted); padding: 2rem 0 0.5rem; }
+
+    .reveal { opacity: 1; transform: none; }
+    .js-enhanced .reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 600ms ease; }
+    .js-enhanced .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 8px;
     }
 
-    .timeline-item time {
-      display: inline-block;
-      font-weight: 600;
-      color: var(--accent-deep);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      font-size: 0.82rem;
+    @media (max-width: 1020px) {
+      .hero, .wins, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .topbar { grid-template-columns: 1fr; border-radius: 24px; }
+      .nav { justify-content: flex-start; }
     }
 
-    .timeline-item .role {
-      margin-bottom: 0.65rem;
-    }
-
-    .project-grid,
-    .contact-grid {
-      grid-column: span 12;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .project-card,
-    .contact-card {
-      padding: 1.6rem;
-      transition:
-        transform 220ms ease,
-        box-shadow 220ms ease,
-        border-color 220ms ease;
-    }
-
-    .project-card:hover,
-    .contact-card:hover,
-    .timeline-item:hover,
-    .stat:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 28px 65px rgba(28, 53, 79, 0.18);
-    }
-
-    .project-card h3,
-    .contact-card h3 {
-      margin: 0 0 0.75rem;
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: -0.03em;
-    }
-
-    .project-card p,
-    .contact-card p {
-      margin: 0;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .mini-label {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      color: var(--accent-deep);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .project-card ul {
-      margin: 1rem 0 0;
-      padding-left: 1.1rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .project-meta {
-      margin-top: 1rem;
-    }
-
-    .project-meta span {
-      border-color: var(--line);
-      background: rgba(255, 255, 255, 0.55);
-      color: var(--muted);
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 1rem;
-      color: var(--accent-deep);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .project-link:hover,
-    .project-link:focus-visible {
-      color: var(--cool);
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 1rem;
-      color: var(--accent-deep);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-link:hover,
-    .contact-link:focus-visible {
-      color: var(--cool);
-    }
-
-    .project-placeholder {
-      grid-column: span 12;
-      padding: 2rem;
-      border-style: dashed;
-      background:
-        linear-gradient(180deg, rgba(248, 252, 255, 0.94), rgba(233, 243, 250, 0.76));
-      text-align: center;
-    }
-
-    .scroll-reveal {
-      opacity: 1;
-      transform: none;
-    }
-
-    .js-enhanced .scroll-reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition:
-        opacity 700ms ease,
-        transform 700ms ease;
-    }
-
-    .js-enhanced .scroll-reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .footer {
-      padding: 2rem 0 1rem;
-      text-align: center;
-    }
-
-    .footer a {
-      color: var(--accent-deep);
-      font-weight: 600;
-    }
-
-    @keyframes slide-down {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes float {
-      0%,
-      100% {
-        transform: translate3d(0, 0, 0);
-      }
-      50% {
-        transform: translate3d(0, -18px, 0);
-      }
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(0, 127, 115, 0.44);
-      }
-      70% {
-        box-shadow: 0 0 0 11px rgba(0, 127, 115, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(0, 127, 115, 0);
-      }
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    @media (max-width: 960px) {
-      .hero,
-      .stats,
-      .project-grid,
-      .contact-grid,
-      .section-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .section-grid > * {
-        min-width: 0;
-      }
-
-      .profile-card,
-      .focus-card,
-      .stats,
-      .section-heading,
-      .timeline,
-      .project-placeholder,
-      .project-grid,
-      .contact-grid {
-        grid-column: 1 / -1;
-        width: 100%;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-      }
-
-      .section-heading p {
-        max-width: none;
-      }
-
-      .timeline-item::before {
-        left: 1.1rem;
-        right: 1.1rem;
-        top: 0;
-        bottom: auto;
-        width: auto;
-        height: 4px;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .page-shell {
-        width: min(var(--max-width), calc(100% - 1rem));
-      }
-
-      .topbar {
-        align-items: flex-start;
-        border-radius: 28px;
-        padding: 1rem;
-      }
-
-      .hero-card,
-      .panel,
-      .profile-card,
-      .focus-card,
-      .timeline-item,
-      .project-card,
-      .contact-card,
-      .project-placeholder,
-      .stat {
-        padding: 1.4rem;
-      }
-
-      .hero h1 {
-        max-width: none;
-      }
-
-      .nav {
-        gap: 0.75rem;
-        justify-content: flex-start;
-      }
-
-      .hero-kicker {
-        align-items: flex-start;
-      }
-
-      .identity-header {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .topbar {
-        position: static;
-        display: grid;
-        gap: 0.75rem;
-        border-radius: 24px;
-        padding: 0.9rem;
-      }
-
-      .brand {
-        font-size: 0.88rem;
-        letter-spacing: 0.06em;
-      }
-
-      .brand,
-      .nav {
-        width: 100%;
-      }
-
-      .nav {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.5rem;
-      }
-
-      .nav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 2.5rem;
-        padding: 0.45rem 0.5rem;
-        border: 1px solid rgba(16, 32, 51, 0.08);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.4);
-        font-size: 0.88rem;
-        text-align: center;
-      }
-
-      .hero {
-        gap: 1rem;
-      }
-
-      .hero-card {
-        padding: 1.35rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.4rem, 13vw, 3.6rem);
-        line-height: 0.98;
-      }
-
-      .headline-strip {
-        font-size: 0.95rem;
-        letter-spacing: 0.05em;
-      }
-
-      .hero-kicker,
-      .cta-row {
-        display: grid;
-        gap: 0.7rem;
-      }
-
-      .headline-strip,
-      .lede {
-        font-size: 1rem;
-      }
-
-      .live-pill,
-      .signal-chip,
-      .button,
-      .button-secondary {
-        width: 100%;
-      }
-
-      .button,
-      .button-secondary {
-        justify-content: center;
-      }
-
-      .signal-row,
-      .section-heading {
-        display: grid;
-        gap: 0.5rem;
-      }
-
-      .terminal-line {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        align-items: start;
-        gap: 0.45rem;
-      }
-
-      .signal-row,
-      .terminal-line {
-        justify-items: start;
-      }
-
-      .signal-row span {
-        text-align: left;
-      }
-
-      .contact-link,
-      .project-link {
-        display: inline;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .page-shell {
-        width: min(var(--max-width), calc(100% - 0.75rem));
-        padding-top: 0.75rem;
-      }
-
-      .topbar,
-      .hero-card,
-      .panel,
-      .profile-card,
-      .focus-card,
-      .timeline-item,
-      .project-card,
-      .contact-card,
-      .project-placeholder,
-      .stat {
-        border-radius: 22px;
-      }
-
-      .topbar {
-        padding: 0.8rem;
-      }
-
-      .nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .hero-card,
-      .panel,
-      .profile-card,
-      .focus-card,
-      .timeline-item,
-      .project-card,
-      .contact-card,
-      .project-placeholder,
-      .stat {
-        padding: 1.1rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(1.85rem, 14vw, 2.7rem);
-      }
-
-      .eyebrow {
-        margin-bottom: 0.9rem;
-      }
-
-      .section-heading h2 {
-        font-size: clamp(1.8rem, 11vw, 2.4rem);
-      }
+    @media (max-width: 680px) {
+      .shell { width: min(var(--maxw), calc(100% - 1rem)); }
+      .hero-main, .section, .profile, .cmd { padding: 1.1rem; }
+      .identity { grid-template-columns: 1fr; }
+      .btn { width: 100%; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-
-      .scroll-reveal {
-        opacity: 1;
-        transform: none;
-      }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
     }
   </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "David Kornel",
+      "url": "https://kornys.github.io/",
+      "sameAs": [
+        "https://github.com/kornys",
+        "https://www.linkedin.com/in/david-kornel/",
+        "https://www.credly.com/users/david-kornel/badges#credly",
+        "https://sessionize.com/david-kornel/"
+      ],
+      "jobTitle": "Software Developer",
+      "worksFor": { "@type": "Organization", "name": "IBM" },
+      "description": "Developer and quality engineer focused on Kubernetes, OpenShift, DevOps, and automation."
+    }
+  </script>
 </head>
 <body>
-  <div class="page-shell">
-    <div class="ambient-orb one" aria-hidden="true"></div>
-    <div class="ambient-orb two" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
     <header class="topbar">
       <a class="brand" href="#top">David Kornel</a>
       <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#certifications">Certifications</a>
+        <a href="#wins">Wins</a>
+        <a href="#spotlight">Case Study</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#now">Now</a>
         <a href="#contact">Contact</a>
-        <a href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Theme</button>
     </header>
 
     <section class="hero" id="top">
-      <div class="hero-card">
-        <div class="eyebrow">David Kornel</div>
-        <h1>
-          Open source Java developer
-          <br>
-          <span>working on Kubernetes</span>
-          <br>
-          and OpenShift.
-        </h1>
-        <p class="headline-strip">Focused on GitOps, automation, and AI</p>
-        <div class="hero-kicker">
-          <div class="live-pill">
-            <span class="live-dot" aria-hidden="true"></span>
-            Software Developer at IBM
-          </div>
-          <div class="signal-chip">
-            Focus:
-            <span class="role-rotator" id="role-rotator">Kubernetes</span>
-          </div>
-        </div>
+      <article class="card hero-main reveal">
+        <div class="eyebrow">Open source + platform engineering</div>
+        <h1>I design reliable delivery systems and <span>ship quality at speed.</span></h1>
+        <p class="headline">DevOps · Kubernetes · Quality Engineering · AI / MCP</p>
         <p class="lede">
-          I work mainly in open source, building and testing Java-based tooling around Kubernetes and OpenShift.
-          Most of my public work happens through collaborative projects like StreamsHub, skodjob, Strimzi, and EnMasse,
-          with a lot of focus on GitOps, automation, and platform reliability. Lately I have also been spending time on
-          AI tooling and MCP, mainly from the Java side.
+          I am David Kornel — Software Developer at IBM and long-time contributor in cloud-native open source.
+          I help teams reduce release friction, improve confidence, and keep production systems stable.
         </p>
         <div class="cta-row">
-          <a class="button" href="#experience">View experience</a>
-          <a class="button-secondary" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn primary" href="#spotlight">View case study</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">Book a call</a>
+          <a class="btn secondary" href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub profile</a>
         </div>
-      </div>
+        <div class="proof-strip" aria-label="social proof">
+          <span class="proof-chip">IBM</span>
+          <span class="proof-chip">Red Hat background</span>
+          <span class="proof-chip">RHCA / OpenShift Architect</span>
+          <span class="proof-chip" id="rotator">Kubernetes</span>
+        </div>
+      </article>
 
       <div class="hero-side">
-        <aside class="panel hero-stack identity-panel">
-          <div class="identity-header">
-            <img
-              class="hero-avatar"
-              src="https://avatars.githubusercontent.com/u/11318335?v=4"
-              alt="Portrait of David Kornel"
-            >
-            <div class="identity-copy">
+        <article class="card profile reveal">
+          <div class="identity">
+            <img class="avatar" src="https://avatars.githubusercontent.com/u/11318335?v=4" alt="Portrait of David Kornel">
+            <div>
               <h2>Engineering profile</h2>
-              <p>
-                Software Developer at IBM, Senior Principal Software Quality Engineer, and long-time open source contributor
-                focused on platform reliability, operator testing, and Java work around Kubernetes and OpenShift.
-              </p>
+              <p>Hands-on developer and quality engineer building Java and automation tooling around Kubernetes/OpenShift delivery workflows.</p>
             </div>
           </div>
-          <div class="fact-list">
-            <span class="fact-chip">IBM</span>
-            <span class="fact-chip">Red Hat background</span>
-            <span class="fact-chip">Brno, Czech Republic</span>
-          </div>
-          <div class="social-row">
-            <a class="social-link" href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="social-link" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="social-link" href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">Credly</a>
-            <a class="social-link" href="https://twitter.com/Kornyss" target="_blank" rel="noreferrer">X / Twitter</a>
-          </div>
-          <div class="signal-board">
-            <div class="signal-row">
-              <strong>Open source work</strong>
-              <span>Most of my public work lives in shared upstream projects</span>
-            </div>
-            <div class="signal-row">
-              <strong>Quality gates</strong>
-              <span>Move feedback earlier and keep it practical</span>
-            </div>
-            <div class="signal-row">
-              <strong>Team flow</strong>
-              <span>Reduce friction across dev, test, and ops</span>
-            </div>
-            <div class="signal-row">
-              <strong>Current focus</strong>
-              <span>AI tooling, MCP, and Java-based integration work</span>
-            </div>
-          </div>
-        </aside>
-
-        <aside class="panel terminal-card">
-          <div class="terminal-bar" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <h2>What I focus on</h2>
-          <div class="badge-list">
-            <span class="badge">CI/CD</span>
-            <span class="badge">Automation</span>
-            <span class="badge">Release quality</span>
-            <span class="badge">Platform engineering</span>
-            <span class="badge">Developer experience</span>
+          <div class="badge-row">
             <span class="badge">Cloud-native</span>
-            <span class="badge">AI / MCP</span>
+            <span class="badge">CI/CD</span>
+            <span class="badge">Operator testing</span>
+            <span class="badge">Release quality</span>
           </div>
-          <div class="terminal-line">
-            <span class="prompt">$</span>
-            <span class="text">design delivery paths teams can trust</span>
-          </div>
-          <div class="terminal-line">
-            <span class="prompt">$</span>
-            <span class="text">remove friction from build-test-release loops</span>
-          </div>
-          <div class="terminal-line active">
-            <span class="prompt">$</span>
-            <span class="text">keep quality visible in production-facing workflows</span>
-          </div>
-        </aside>
+        </article>
+        <article class="card cmd reveal" aria-label="focus terminal">
+          <h2>Current focus</h2>
+          <p class="line"><span class="prompt">$</span>build trustworthy build-test-release loops</p>
+          <p class="line"><span class="prompt">$</span>automate Kubernetes platform validation</p>
+          <p class="line"><span class="prompt">$</span>bring practical AI + MCP into Java workflows</p>
+        </article>
       </div>
     </section>
 
-    <main>
-      <section class="section-grid scroll-reveal" id="about">
-        <div class="section-heading">
-          <h2>Built for production.</h2>
-          <p>
-            My work sits at the intersection of software development, operations, and quality. I care about systems that
-            are understandable, testable, and stable when people actually have to run them.
-          </p>
-        </div>
-
-        <article class="hero-card profile-card scroll-reveal">
-          <h3>Profile</h3>
-          <p>
-            I write software, build test tooling, and help shape the delivery side around it. A lot of my work has been in
-            Kubernetes and OpenShift environments, especially around operator testing, CI/CD, and production-like validation.
-            I tend to work where development, platform concerns, and release confidence meet.
-          </p>
-          <div class="chips">
-            <span class="chip">Kubernetes / OpenShift</span>
-            <span class="chip">Open source development</span>
-            <span class="chip">Cloud-native platforms</span>
-            <span class="chip">Hands-on development</span>
-            <span class="chip">Quality-driven delivery</span>
-            <span class="chip">Java development</span>
-            <span class="chip">AI / MCP</span>
-          </div>
+    <main id="main">
+      <section class="wins" id="wins">
+        <article class="card win reveal">
+          <strong data-count="4">4</strong>
+          <span>Core collaborations</span>
+          <p>Public work across StreamsHub, skodjob, Strimzi, and EnMasse.</p>
         </article>
-
-        <article class="panel focus-card scroll-reveal">
-          <h3>How I add value</h3>
-          <ul class="focus-list">
-            <li>Reduce friction between development, testing, and operations.</li>
-            <li>Design workflows that make reliable releases easier, not slower.</li>
-            <li>Automate validation around Kubernetes platforms and operator-based systems.</li>
-            <li>Keep engineering quality visible through faster, more useful feedback loops.</li>
-          </ul>
+        <article class="card win reveal">
+          <strong data-count="2015">2015</strong>
+          <span>GitHub since</span>
+          <p>Long-term open-source engineering history with consistent technical output.</p>
         </article>
-
-        <div class="stats">
-          <div class="stat scroll-reveal">
-            <strong data-count="4">4</strong>
-            <span class="mini-label">Key orgs</span>
-            <p>Most of my public work shows up through collaboration in StreamsHub, skodjob, Strimzi, and EnMasse.</p>
-          </div>
-          <div class="stat scroll-reveal">
-            <strong data-count="2015">2015</strong>
-            <span class="mini-label">GitHub since</span>
-            <p>Years of public engineering activity across development, testing, automation, and platform work.</p>
-          </div>
-          <div class="stat scroll-reveal">
-            <strong data-count="2">2</strong>
-            <span class="mini-label">Major chapters</span>
-            <p>Professional track shaped by Red Hat and continued today within IBM.</p>
-          </div>
-        </div>
+        <article class="card win reveal">
+          <strong data-count="2">2</strong>
+          <span>Major chapters</span>
+          <p>Delivery and quality track shaped across Red Hat and IBM.</p>
+        </article>
+        <article class="card win reveal">
+          <strong>24/7</strong>
+          <span>Reliability mindset</span>
+          <p>Production-first approach: test depth, feedback speed, and operational clarity.</p>
+        </article>
       </section>
 
-      <section class="section-grid scroll-reveal" id="certifications">
-        <div class="section-heading">
-          <h2>Certifications</h2>
+      <section class="card section reveal" id="spotlight">
+        <h2>Case Study Spotlight</h2>
+        <p>
+          Example: improving release confidence for Kubernetes/operator delivery by shifting validation left and increasing signal quality in CI.
+        </p>
+        <article class="spotlight">
+          <h3>From slow confidence to fast confidence</h3>
           <p>
-            Professional credibility built through hands-on Red Hat certification tracks, public technical work, and
-            ongoing badge-based learning. Architecture, OpenShift platform design, and cloud-native platforms are core areas.
+            Reframed pipelines around production-like checks, deterministic automation, and practical quality gates so teams got actionable feedback earlier.
           </p>
-        </div>
-
-        <article class="hero-card profile-card scroll-reveal">
-          <h3>Red Hat certifications</h3>
-          <p>
-            I hold Red Hat certifications including Red Hat Certified Architect and Red Hat Certified OpenShift Architect.
-            Those certifications align directly with the platform, architecture, Kubernetes, OpenShift, and production-oriented
-            engineering work I do.
-          </p>
-          <div class="chips">
-            <span class="chip">Red Hat Certified Architect</span>
-            <span class="chip">Red Hat Certified OpenShift Architect</span>
-            <span class="chip">Platform architecture</span>
-            <span class="chip">Cloud-native systems</span>
+          <div class="meta">
+            <span>Problem: late failures</span>
+            <span>Solution: earlier validation</span>
+            <span>Impact: faster safer releases</span>
           </div>
+          <details>
+            <summary>What changed in practice</summary>
+            <ul class="now-list">
+              <li>Added operator and deployment checks closer to pull-request workflows.</li>
+              <li>Reduced noisy signals and emphasized failures that block production confidence.</li>
+              <li>Improved shared visibility between development, QE, and platform teams.</li>
+            </ul>
+          </details>
+          <details>
+            <summary>How to extend this case study</summary>
+            <ul class="now-list">
+              <li>Add before/after metrics (lead time, escaped defects, release frequency).</li>
+              <li>Attach architecture diagrams or generated visuals for better storytelling.</li>
+              <li>Embed links to representative repositories and pipeline examples.</li>
+            </ul>
+          </details>
         </article>
+      </section>
 
-        <article class="panel focus-card scroll-reveal">
-          <h3>Learning profile</h3>
-          <ul class="focus-list">
-            <li>Strong interest in Kubernetes and broader cloud-native engineering.</li>
-            <li>Continuous learning reflected through certification paths and badge-based achievements.</li>
-            <li>Current investment in AI tooling, AI-assisted development, and Model Context Protocol workflows.</li>
-            <li>Professional profile designed to expand with verified badge links and deeper certification detail.</li>
-          </ul>
-        </article>
-
-        <div class="contact-grid">
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Verification</span>
-            <h3>Red Hat profile</h3>
-            <p>
-              Public verification is available through Red Hat Certification Central and shows a broader certification track.
-            </p>
-            <a class="contact-link" href="https://rhtapps.redhat.com/verify?certId=180-250-847" target="_blank" rel="noreferrer">
-              View Red Hat verification
-            </a>
+      <section class="card section reveal" id="experience">
+        <h2>Experience</h2>
+        <p>Path through Red Hat into IBM, centered on platform reliability, engineering quality, and practical delivery automation.</p>
+        <div class="timeline-wrap">
+          <article class="timeline-item">
+            <h3>IBM — Software Developer</h3>
+            <p>Building dependable engineering workflows where software development, QE, and operations align around fast and safe delivery.</p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Badges</span>
-            <h3>Credly portfolio</h3>
-            <p>
-              Public badge portfolio covering certification-backed learning and professional achievements.
-            </p>
-            <a class="contact-link" href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">
-              View Credly badges
-            </a>
-          </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Current direction</span>
-            <h3>AI and MCP</h3>
-            <p>
-              Current exploration is focused on AI-native engineering workflows, practical automation, and building with MCP.
-            </p>
+          <article class="timeline-item">
+            <h3>Red Hat — Quality & platform engineering</h3>
+            <p>Focused on Kubernetes/OpenShift ecosystems, operator testing, release confidence, and cloud-native automation.</p>
           </article>
         </div>
       </section>
 
-      <section class="section-grid scroll-reveal" id="experience">
-        <div class="section-heading">
-          <h2>Experience</h2>
-          <p>
-            Publicly visible experience shows a path through Red Hat into IBM, with long-running focus on reliability,
-            operator testing, automation, and delivery quality in Kubernetes-centered environments.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item scroll-reveal">
-            <div>
-              <time>Current</time>
-            </div>
-            <div>
-              <h3 class="role">IBM</h3>
-              <p>
-                Continuing work across software development, engineering quality, and operational effectiveness.
-                The emphasis is on dependable delivery, strong feedback cycles, and engineering systems that remain healthy as they evolve.
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline-item scroll-reveal">
-            <div>
-              <time>Previously</time>
-            </div>
-            <div>
-              <h3 class="role">Red Hat</h3>
-              <p>
-                Built experience in environments where Kubernetes, OpenShift, platform reliability, and practical automation matter.
-                That background continues to shape how I approach release quality, operator testing, and engineering workflow design.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-grid scroll-reveal" id="projects">
-        <div class="section-heading">
-          <h2>Projects</h2>
-          <p>
-            Most of my public code is collaborative open-source work rather than standalone personal repositories.
-            The strongest examples sit across StreamsHub, skodjob, Strimzi, and EnMasse.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card scroll-reveal">
-            <span class="mini-label">Collaborative project</span>
+      <section class="card section reveal" id="projects">
+        <h2>Featured projects</h2>
+        <p>Collaborative, open-source projects that reflect hands-on engineering across Java, Kubernetes, and automation.</p>
+        <div class="grid-3">
+          <article class="card project">
             <h3>kubetest4j</h3>
-            <p>
-              A library for testing Kubernetes deployments and operators using the Fabric8 API. It fits closely with the kind
-              of cloud-native testing and validation work I spend most of my time on.
-            </p>
-            <div class="project-meta">
-              <span>Java</span>
-              <span>Kubernetes</span>
-              <span>Operator testing</span>
-            </div>
-            <a class="project-link" href="https://github.com/skodjob/kubetest4j" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
+            <p>Library for testing Kubernetes deployments and operators using the Fabric8 API.</p>
+            <div class="meta"><span>Java</span><span>Kubernetes</span><span>Operator testing</span></div>
+            <p><a href="https://github.com/skodjob/kubetest4j" target="_blank" rel="noreferrer">Open repository →</a></p>
           </article>
-
-          <article class="project-card scroll-reveal">
-            <span class="mini-label">Collaborative project</span>
+          <article class="card project">
             <h3>EnMasse</h3>
-            <p>
-              Self-service messaging on Kubernetes and OpenShift, and a good example of the messaging and platform work I
-              contributed to in open source.
-            </p>
-            <div class="project-meta">
-              <span>Java</span>
-              <span>Messaging</span>
-              <span>Kubernetes / OpenShift</span>
-            </div>
-            <a class="project-link" href="https://github.com/EnMasseProject/enmasse" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
+            <p>Self-service messaging on Kubernetes and OpenShift with production-oriented platform concerns.</p>
+            <div class="meta"><span>Messaging</span><span>Kubernetes</span><span>OpenShift</span></div>
+            <p><a href="https://github.com/EnMasseProject/enmasse" target="_blank" rel="noreferrer">Open repository →</a></p>
           </article>
-
-          <article class="project-card scroll-reveal">
-            <span class="mini-label">Collaborative project</span>
+          <article class="card project">
             <h3>automation-hub</h3>
-            <p>
-              An automation repository built around Ansible and Kubernetes deployments, reflecting the more operational side
-              of my open-source work.
-            </p>
-            <div class="project-meta">
-              <span>Ansible</span>
-              <span>Kubernetes</span>
-              <span>Automation</span>
-            </div>
-            <a class="project-link" href="https://github.com/skodjob/automation-hub" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
+            <p>Ansible and Kubernetes automation repository representing operational workflow engineering.</p>
+            <div class="meta"><span>Ansible</span><span>Automation</span><span>Platform ops</span></div>
+            <p><a href="https://github.com/skodjob/automation-hub" target="_blank" rel="noreferrer">Open repository →</a></p>
           </article>
         </div>
       </section>
 
-      <section class="section-grid scroll-reveal" id="contact">
-        <div class="section-heading">
-          <h2>Contact</h2>
-          <p>
-            You can reach me through the public profiles below.
-          </p>
+      <section class="card section reveal" id="now">
+        <h2>Now</h2>
+        <p>What I am currently building and learning.</p>
+        <div class="grid-2">
+          <article class="card contact">
+            <h3>AI-enabled engineering workflows</h3>
+            <p>Exploring practical, trustworthy uses of AI for development and quality workflows in Java-centric environments.</p>
+          </article>
+          <article class="card contact">
+            <h3>MCP integration</h3>
+            <p>Testing Model Context Protocol patterns that reduce manual context-switching and improve automation speed.</p>
+          </article>
+          <article class="card contact">
+            <h3>Quality system design</h3>
+            <p>Continuing to improve signal quality in CI/CD so teams can move faster with less release risk.</p>
+          </article>
+          <article class="card contact">
+            <h3>Cloud-native reliability</h3>
+            <p>Keeping a strong focus on Kubernetes/OpenShift resilience, observability, and sustainable platform operations.</p>
+          </article>
         </div>
+      </section>
 
-        <div class="contact-grid">
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Primary</span>
-            <h3>GitHub profile</h3>
-            <p>
-              Public code, project history, and a direct technical profile anchored to your work.
-            </p>
-            <a class="contact-link" href="https://github.com/kornys" target="_blank" rel="noreferrer">
-              github.com/kornys
-            </a>
+      <section class="card section reveal" id="contact">
+        <h2>Contact</h2>
+        <p>Reach out through the channels below for collaboration, platform engineering discussions, or speaking opportunities.</p>
+        <div class="grid-2">
+          <article class="card contact">
+            <h3>GitHub</h3>
+            <p>Public repositories, contributions, and project history.</p>
+            <p><a href="https://github.com/kornys" target="_blank" rel="noreferrer">github.com/kornys →</a></p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Professional</span>
+          <article class="card contact">
             <h3>LinkedIn</h3>
-            <p>
-              A stronger business-facing profile for outreach, networking, and role context.
-            </p>
-            <a class="contact-link" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">
-              linkedin.com/in/david-kornel
-            </a>
+            <p>Professional profile for outreach and collaboration.</p>
+            <p><a href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">linkedin.com/in/david-kornel →</a></p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Badges</span>
+          <article class="card contact">
             <h3>Credly</h3>
-            <p>
-              Public badge portfolio showing certifications and broader learning progress.
-            </p>
-            <a class="contact-link" href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">
-              credly.com/users/david-kornel
-            </a>
+            <p>Certification badges and learning portfolio.</p>
+            <p><a href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">credly.com/users/david-kornel →</a></p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Speaking</span>
+          <article class="card contact">
             <h3>Sessionize</h3>
-            <p>
-              Public speaker profile with sessions centered on observability, reliable environments, and cloud-native engineering.
-            </p>
-            <a class="contact-link" href="https://sessionize.com/david-kornel/" target="_blank" rel="noreferrer">
-              sessionize.com/david-kornel
-            </a>
+            <p>Talks and speaking profile around cloud-native engineering.</p>
+            <p><a href="https://sessionize.com/david-kornel/" target="_blank" rel="noreferrer">sessionize.com/david-kornel →</a></p>
           </article>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>
-        Code, public profiles, and updates live through
-        <a href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub</a>.
-      </p>
+      Built for production-minded engineering and continuous improvement.
     </footer>
   </div>
+
   <script>
     (() => {
       document.documentElement.classList.add("js-enhanced");
-
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const roleRotator = document.getElementById("role-rotator");
-      const roles = ["Kubernetes", "Cloud-native", "Quality Engineering", "AI / MCP"];
-      let roleIndex = 0;
-
-      if (roleRotator && !prefersReducedMotion) {
-        window.setInterval(() => {
-          roleIndex = (roleIndex + 1) % roles.length;
-          roleRotator.textContent = roles[roleIndex];
-        }, 1800);
+      const root = document.documentElement;
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "dark" || storedTheme === "light") {
+        root.setAttribute("data-theme", storedTheme);
       }
 
-      const reveals = document.querySelectorAll(".scroll-reveal");
-      if (reveals.length) {
-        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-          reveals.forEach((element) => element.classList.add("visible"));
+      const themeToggle = document.getElementById("theme-toggle");
+      if (themeToggle) {
+        const setButtonText = () => {
+          const mode = root.getAttribute("data-theme") === "dark" ? "Dark" : "Light";
+          themeToggle.textContent = mode;
+          themeToggle.setAttribute("aria-label", `Theme mode: ${mode}. Click to toggle`);
+        };
+
+        setButtonText();
+
+        themeToggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          setButtonText();
+        });
+      }
+
+      const roles = ["Kubernetes", "GitOps", "Automation", "AI / MCP"];
+      const rotator = document.getElementById("rotator");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (rotator && !reducedMotion) {
+        let i = 0;
+        window.setInterval(() => {
+          i = (i + 1) % roles.length;
+          rotator.textContent = roles[i];
+        }, 1900);
+      }
+
+      const revealItems = document.querySelectorAll(".reveal");
+      if (revealItems.length) {
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+          revealItems.forEach((el) => el.classList.add("visible"));
         } else {
           const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -1636,51 +619,47 @@
                 observer.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.16 });
-
-          reveals.forEach((element) => observer.observe(element));
+          }, { threshold: 0.12 });
+          revealItems.forEach((el) => observer.observe(el));
         }
       }
 
       const counters = document.querySelectorAll("[data-count]");
       if (counters.length) {
-        const animateCounter = (element) => {
-          const target = Number(element.dataset.count || "0");
+        const runCount = (el) => {
+          const target = Number(el.dataset.count || "0");
           const start = performance.now();
           const duration = 900;
-
-          const tick = (now) => {
+          const frame = (now) => {
             const progress = Math.min((now - start) / duration, 1);
-            const value = Math.round(target * (1 - Math.pow(1 - progress, 3)));
-            element.textContent = String(value);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = String(Math.round(target * eased));
             if (progress < 1) {
-              window.requestAnimationFrame(tick);
+              window.requestAnimationFrame(frame);
             }
           };
-
-          window.requestAnimationFrame(tick);
+          window.requestAnimationFrame(frame);
         };
 
-        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-          counters.forEach((element) => animateCounter(element));
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+          counters.forEach((el) => runCount(el));
         } else {
-          const counterObserver = new IntersectionObserver((entries) => {
+          const countObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
+                runCount(entry.target);
+                countObserver.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.75 });
-
-          counters.forEach((element) => counterObserver.observe(element));
+          }, { threshold: 0.7 });
+          counters.forEach((el) => countObserver.observe(el));
         }
       }
 
-      if (!prefersReducedMotion) {
+      if (!reducedMotion) {
         window.addEventListener("pointermove", (event) => {
-          document.documentElement.style.setProperty("--spot-x", event.clientX + "px");
-          document.documentElement.style.setProperty("--spot-y", event.clientY + "px");
+          root.style.setProperty("--spot-x", `${event.clientX}px`);
+          root.style.setProperty("--spot-y", `${event.clientY}px`);
         }, { passive: true });
       }
     })();
