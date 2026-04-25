@@ -6,41 +6,70 @@
   <title>David Kornel | DevOps, Developer, Quality Engineer</title>
   <meta
     name="description"
-    content="Professional personal page for David Kornel, focused on DevOps, software development, quality engineering, Kubernetes, and delivery automation."
+    content="Professional personal page for David Kornel, focused on DevOps, software development, quality engineering, Kubernetes, OpenShift, and delivery automation."
   >
-  <meta name="theme-color" content="#dbe8f4">
+  <meta name="theme-color" content="#0b0d13">
   <meta property="og:title" content="David Kornel | DevOps, Developer, Quality Engineer">
   <meta
     property="og:description"
-    content="Professional personal page for David Kornel, focused on DevOps, software development, quality engineering, Kubernetes, and delivery automation."
+    content="Software Developer at IBM, Senior Principal Software Quality Engineer, and open source contributor focused on Kubernetes, OpenShift, automation, and quality-driven delivery."
   >
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/11318335?v=4">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kornys.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="David Kornel | DevOps, Developer, Quality Engineer">
+  <meta name="twitter:description" content="Cloud-native engineering, DevOps, quality automation, Kubernetes, OpenShift, Java, AI, and MCP.">
+  <link rel="canonical" href="https://kornys.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #dbe8f4;
-      --surface: rgba(246, 251, 255, 0.82);
-      --surface-strong: #fbfdff;
-      --ink: #102033;
-      --muted: #4d6175;
-      --line: rgba(16, 32, 51, 0.12);
-      --accent: #007f73;
-      --accent-deep: #005f57;
-      --accent-soft: rgba(0, 127, 115, 0.12);
-      --cool: #224d7a;
-      --glow: rgba(0, 127, 115, 0.24);
-      --shadow: 0 24px 60px rgba(28, 53, 79, 0.14);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --max-width: 1160px;
-      --spot-x: 50%;
-      --spot-y: 20%;
+      color-scheme: dark;
+      --bg: #0b0d13;
+      --bg-2: #171117;
+      --ink: #fff8ed;
+      --muted: #c8c0c7;
+      --soft: rgba(255, 248, 237, 0.08);
+      --surface: rgba(255, 248, 237, 0.1);
+      --surface-strong: rgba(255, 248, 237, 0.17);
+      --line: rgba(255, 248, 237, 0.18);
+      --accent: #00e5ff;
+      --accent-2: #ff4d8d;
+      --accent-3: #ffe66d;
+      --accent-ink: #08090d;
+      --glow-a: rgba(0, 229, 255, 0.24);
+      --glow-b: rgba(255, 77, 141, 0.22);
+      --glow-c: rgba(255, 230, 109, 0.2);
+      --grid: rgba(255, 248, 237, 0.055);
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
+      --maxw: 1180px;
+      --radius: 8px;
+      --progress: 0;
+      --mx: 50%;
+      --my: 22%;
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #fff7eb;
+      --bg-2: #edf7fb;
+      --ink: #141018;
+      --muted: #5a5260;
+      --soft: rgba(20, 16, 24, 0.065);
+      --surface: rgba(255, 255, 255, 0.7);
+      --surface-strong: rgba(255, 255, 255, 0.9);
+      --line: rgba(20, 16, 24, 0.14);
+      --accent: #007f98;
+      --accent-2: #c2185b;
+      --accent-3: #8a6b00;
+      --accent-ink: #ffffff;
+      --glow-a: rgba(0, 127, 152, 0.18);
+      --glow-b: rgba(194, 24, 91, 0.14);
+      --glow-c: rgba(255, 205, 57, 0.23);
+      --grid: rgba(20, 16, 24, 0.045);
+      --shadow: 0 24px 65px rgba(63, 41, 65, 0.16);
     }
 
     * {
@@ -53,39 +82,46 @@
 
     body {
       margin: 0;
-      font-family: "IBM Plex Sans", sans-serif;
-      color: var(--ink);
-      overflow-x: hidden;
-      background:
-        radial-gradient(circle at top left, rgba(0, 127, 115, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(34, 77, 122, 0.22), transparent 22%),
-        linear-gradient(180deg, #edf5fb 0%, #dce9f4 100%);
       min-height: 100vh;
+      color: var(--ink);
+      font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(118deg, var(--glow-a), transparent 27%),
+        linear-gradient(232deg, var(--glow-b), transparent 30%),
+        linear-gradient(20deg, var(--glow-c), transparent 32%),
+        linear-gradient(180deg, var(--bg), var(--bg-2));
+      overflow-x: hidden;
     }
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
+      z-index: 0;
       pointer-events: none;
-      background-image:
-        linear-gradient(rgba(16, 32, 51, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(16, 32, 51, 0.04) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 80%);
-      opacity: 0.35;
+      background:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        radial-gradient(circle at var(--mx) var(--my), var(--glow-a), transparent 24rem);
+      background-size: 42px 42px, 42px 42px, auto;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.16) 72%, transparent);
     }
 
     body::after {
       content: "";
       position: fixed;
       inset: 0;
+      z-index: 0;
       pointer-events: none;
       background:
-        radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(255, 255, 255, 0.58), transparent 18%),
-        radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(0, 127, 115, 0.14), transparent 32%);
-      opacity: 0.8;
-      z-index: 0;
+        repeating-linear-gradient(
+          112deg,
+          transparent 0,
+          transparent 11px,
+          var(--grid) 12px,
+          transparent 13px
+        );
+      opacity: 0.55;
     }
 
     a {
@@ -94,1082 +130,841 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
-    .page-shell {
-      width: min(var(--max-width), calc(100% - 2rem));
-      margin: 0 auto;
-      padding: 1.25rem 0 4rem;
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+    }
+
+    .scroll-meter {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 80;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+      transform: scaleX(var(--progress));
+      transform-origin: left;
+    }
+
+    .shell {
       position: relative;
       z-index: 1;
-    }
-
-    .ambient-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(6px);
-      opacity: 0.65;
-      pointer-events: none;
-      z-index: 0;
-      animation: float 14s ease-in-out infinite;
-    }
-
-    .ambient-orb.one {
-      width: 210px;
-      height: 210px;
-      top: 5.5rem;
-      right: 6%;
-      background: radial-gradient(circle, rgba(0, 127, 115, 0.28), transparent 68%);
-    }
-
-    .ambient-orb.two {
-      width: 300px;
-      height: 300px;
-      top: 22rem;
-      left: -6rem;
-      background: radial-gradient(circle, rgba(34, 77, 122, 0.24), transparent 70%);
-      animation-delay: -4s;
+      width: min(var(--maxw), calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1rem 0 4rem;
     }
 
     .topbar {
-      display: flex;
-      justify-content: space-between;
+      position: sticky;
+      top: 0.8rem;
+      z-index: 50;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
       gap: 1rem;
-      padding: 0.85rem 1rem;
-      margin: 0 auto 1.5rem;
+      min-height: 58px;
+      padding: 0.62rem 0.72rem 0.62rem 1rem;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(247, 251, 255, 0.74);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 10px 30px rgba(30, 63, 95, 0.1);
-      animation: slide-down 700ms ease-out both;
-      position: sticky;
-      top: 1rem;
-      z-index: 20;
+      border-radius: var(--radius);
+      background: rgba(11, 13, 19, 0.72);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    :root[data-theme="light"] .topbar {
+      background: rgba(255, 255, 255, 0.7);
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.62rem;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 0.95rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      min-width: 0;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      color: var(--accent-ink);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-size: 0.86rem;
     }
 
     .nav {
       display: flex;
-      gap: 1.1rem;
+      justify-content: center;
+      gap: 0.3rem;
       flex-wrap: wrap;
-      justify-content: flex-end;
-      min-width: 0;
+    }
+
+    .nav a,
+    .icon-button {
+      min-height: 2.35rem;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: var(--muted);
+      transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
     }
 
     .nav a {
-      font-size: 0.95rem;
-      color: var(--muted);
-      transition: color 180ms ease;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 0.7rem;
+      font-size: 0.93rem;
+      font-weight: 600;
     }
 
     .nav a:hover,
-    .nav a:focus-visible {
-      color: var(--accent-deep);
+    .nav a:focus-visible,
+    .icon-button:hover,
+    .icon-button:focus-visible {
+      color: var(--ink);
+      border-color: var(--line);
+      background: var(--soft);
+    }
+
+    .icon-button {
+      display: inline-grid;
+      place-items: center;
+      width: 2.55rem;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .icon-button svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .hero {
+      min-height: calc(100vh - 90px);
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-      gap: 1.5rem;
-      align-items: stretch;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .hero-card,
-    .panel,
-    .timeline-item,
-    .stat,
-    .project-placeholder,
-    .project-card,
-    .contact-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: var(--surface);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 3rem;
-      position: relative;
-      overflow: hidden;
-      animation: rise 800ms ease-out both;
-      background:
-        linear-gradient(140deg, rgba(249, 253, 255, 0.94), rgba(235, 245, 251, 0.78)),
-        var(--surface);
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      right: -70px;
-      bottom: -80px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--glow) 0%, transparent 72%);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(120deg, rgba(255, 255, 255, 0.52), transparent 36%),
-        radial-gradient(circle at 82% 18%, rgba(34, 77, 122, 0.16), transparent 28%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-flex;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
       align-items: center;
-      gap: 0.45rem;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent-deep);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 1.1rem;
+      gap: 1.2rem;
+      padding: clamp(2rem, 5vw, 5.8rem) 0 2.4rem;
+    }
+
+    .hero-copy {
       position: relative;
-      z-index: 1;
+      padding: clamp(1.2rem, 3vw, 2rem) 0;
     }
 
-    .hero h1,
-    .section-heading h2 {
-      margin: 0;
-      font-family: "Space Grotesk", sans-serif;
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      max-width: 10ch;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 span {
-      color: var(--accent-deep);
-    }
-
-    .headline-strip {
-      margin: 1rem 0 0;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1rem, 2vw, 1.35rem);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--cool);
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-kicker {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.7rem;
-      margin-top: 1.4rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .live-pill,
-    .signal-chip {
+    .eyebrow,
+    .mini-label {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.55rem 0.85rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.64);
-      font-size: 0.92rem;
-      color: var(--muted);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
-    .live-dot {
-      width: 0.55rem;
-      height: 0.55rem;
+    .eyebrow::before,
+    .mini-label::before {
+      content: "";
+      width: 0.58rem;
+      height: 0.58rem;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 0 0 rgba(0, 127, 115, 0.44);
-      animation: pulse 1.8s infinite;
+      box-shadow: 0 0 0 6px var(--glow-a);
     }
 
-    .role-rotator {
-      min-width: 11ch;
-      color: var(--cool);
-      font-weight: 700;
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 11ch;
+      margin-top: 1rem;
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      line-height: 0.86;
+    }
+
+    h1 span {
+      color: var(--accent-2);
+    }
+
+    .headline {
+      max-width: 46rem;
+      margin: 1.35rem 0 0;
+      color: var(--ink);
+      font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+      line-height: 1.45;
+      font-weight: 600;
     }
 
     .lede {
-      max-width: 42rem;
-      margin: 1.4rem 0 0;
-      font-size: 1.15rem;
-      line-height: 1.7;
+      max-width: 43rem;
+      margin: 1rem 0 0;
       color: var(--muted);
-      position: relative;
-      z-index: 1;
+      font-size: 1.04rem;
+      line-height: 1.75;
+    }
+
+    .cta-row,
+    .proof-row,
+    .social-row,
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.62rem;
     }
 
     .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .button,
-    .button-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition:
-        transform 180ms ease,
-        box-shadow 180ms ease,
-        border-color 180ms ease,
-        background 180ms ease;
+      margin-top: 1.7rem;
     }
 
     .button {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(0, 95, 87, 0.24);
-    }
-
-    .button-secondary {
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.55);
-      color: var(--ink);
-    }
-
-    .button:hover,
-    .button-secondary:hover,
-    .button:focus-visible,
-    .button-secondary:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 1rem;
-      animation: rise 1000ms ease-out both;
-    }
-
-    .hero-stack {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(17, 33, 53, 0.97), rgba(11, 22, 37, 0.99));
-      color: #edf6ff;
-    }
-
-    .hero-stack::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(0, 127, 115, 0.26), transparent 28%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 38%);
-      pointer-events: none;
-    }
-
-    .hero-stack h2,
-    .hero-stack p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-stack p {
-      color: rgba(237, 246, 255, 0.78);
-    }
-
-    .identity-panel {
-      display: grid;
-      gap: 1.2rem;
-    }
-
-    .identity-header {
-      display: grid;
-      grid-template-columns: 96px minmax(0, 1fr);
-      gap: 1rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 24px;
-      object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .identity-copy h2 {
-      margin: 0;
-    }
-
-    .identity-copy p {
-      margin-top: 0.5rem;
-    }
-
-    .fact-list,
-    .social-row,
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-    }
-
-    .fact-list,
-    .social-row {
-      position: relative;
-      z-index: 1;
-    }
-
-    .fact-chip,
-    .social-link,
-    .project-meta span {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.55rem 0.82rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.06);
-      color: rgba(237, 246, 255, 0.84);
+      min-height: 2.85rem;
+      padding: 0 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
     }
 
-    .social-link {
-      border-color: rgba(255, 255, 255, 0.12);
-      transition:
-        transform 180ms ease,
-        background 180ms ease;
+    .button.primary {
+      color: var(--accent-ink);
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 44px var(--glow-a);
     }
 
-    .social-link:hover,
-    .social-link:focus-visible {
+    .button.secondary {
+      color: var(--ink);
+      background: var(--surface);
+    }
+
+    .button:hover,
+    .button:focus-visible {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 22px 46px rgba(0, 0, 0, 0.22);
     }
 
-    .signal-board {
-      margin-top: 1.2rem;
-      display: grid;
-      gap: 0.8rem;
-      position: relative;
-      z-index: 1;
+    .proof-row {
+      margin-top: 1.4rem;
     }
 
-    .signal-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
+    .proof {
+      display: inline-flex;
       align-items: center;
-      padding: 0.85rem 0.95rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .signal-row strong {
-      font-size: 0.95rem;
+      min-height: 2.2rem;
+      padding: 0 0.68rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: var(--surface);
+      font-size: 0.9rem;
       font-weight: 600;
-      letter-spacing: 0.01em;
-      min-width: 0;
     }
 
-    .signal-row span {
-      color: rgba(237, 246, 255, 0.68);
-      font-size: 0.88rem;
-      text-align: right;
-      min-width: 0;
-    }
-
-    .terminal-card {
+    .hero-visual {
       position: relative;
+      min-height: 650px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(250, 253, 255, 0.9), rgba(236, 244, 250, 0.78));
+        linear-gradient(145deg, var(--glow-a), transparent 34%),
+        linear-gradient(330deg, var(--glow-b), transparent 30%),
+        linear-gradient(28deg, var(--glow-c), transparent 36%),
+        linear-gradient(180deg, rgba(255, 248, 237, 0.12), rgba(255, 248, 237, 0.04));
+      box-shadow: var(--shadow);
+      isolation: isolate;
     }
 
-    .terminal-bar {
-      display: flex;
-      gap: 0.45rem;
-      margin-bottom: 1rem;
-    }
-
-    .terminal-bar span {
-      width: 0.72rem;
-      height: 0.72rem;
-      border-radius: 50%;
-      background: rgba(16, 32, 51, 0.16);
-    }
-
-    .terminal-line {
-      display: flex;
-      gap: 0.7rem;
-      margin-top: 0.8rem;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 0.92rem;
-      color: var(--ink);
-    }
-
-    .terminal-line .prompt {
-      color: var(--accent-deep);
-      flex: 0 0 auto;
-    }
-
-    .terminal-line .text {
-      color: var(--muted);
-      min-width: 0;
-    }
-
-    .terminal-line.active .text::after {
+    .hero-visual::before {
       content: "";
-      display: inline-block;
-      width: 0.58rem;
-      height: 1em;
-      margin-left: 0.25rem;
-      background: rgba(16, 32, 51, 0.7);
-      vertical-align: -0.12em;
-      animation: blink 1s steps(1) infinite;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 34px 34px;
+      transform: perspective(640px) rotateX(58deg) scale(1.5);
+      transform-origin: center bottom;
     }
 
-    .panel {
-      padding: 1.5rem;
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(118deg, transparent 0 43%, var(--glow-b) 43% 44%, transparent 44%),
+        linear-gradient(128deg, transparent 0 56%, var(--glow-a) 56% 57%, transparent 57%),
+        linear-gradient(138deg, transparent 0 70%, var(--glow-c) 70% 71%, transparent 71%);
     }
 
-    .panel h2,
-    .panel h3,
-    .project-card h3,
-    .contact-card h3,
-    .timeline-item h3,
-    .project-placeholder h3 {
-      margin: 0 0 0.75rem;
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: -0.03em;
+    .portrait-stage {
+      position: absolute;
+      left: 50%;
+      top: 9%;
+      width: min(62%, 290px);
+      transform: translateX(-50%);
     }
 
-    .panel p,
-    .timeline-item p,
-    .project-placeholder p,
-    .footer p {
-      margin: 0;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .badge-list,
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1rem;
-    }
-
-    .badge-list {
+    .portrait-frame {
       position: relative;
-      z-index: 1;
+      overflow: hidden;
+      aspect-ratio: 1;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-strong);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
     }
 
-    .badge,
-    .chip {
-      padding: 0.55rem 0.8rem;
-      border-radius: 999px;
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.04) contrast(1.04);
+    }
+
+    .portrait-stage::before,
+    .portrait-stage::after {
+      content: "";
+      position: absolute;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.58);
-      font-size: 0.92rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+    }
+
+    .portrait-stage::before {
+      inset: 12% -18% auto auto;
+      width: 42%;
+      height: 42%;
+      transform: rotate(8deg);
+      z-index: -1;
+    }
+
+    .portrait-stage::after {
+      inset: auto auto -14% -15%;
+      width: 48%;
+      height: 48%;
+      transform: rotate(-9deg);
+      z-index: -1;
+    }
+
+    .node {
+      position: absolute;
+      display: grid;
+      gap: 0.35rem;
+      width: min(42%, 220px);
+      padding: 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(11, 13, 19, 0.76);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    :root[data-theme="light"] .node {
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .node strong {
+      font-size: 0.9rem;
+    }
+
+    .node span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .node.one {
+      left: 6%;
+      top: 44%;
+    }
+
+    .node.two {
+      right: 6%;
+      top: 38%;
+    }
+
+    .node.three {
+      left: 11%;
+      bottom: 9%;
+    }
+
+    .node.four {
+      right: 8%;
+      bottom: 13%;
+    }
+
+    .terminal {
+      position: absolute;
+      left: 50%;
+      bottom: 28%;
+      width: min(66%, 340px);
+      transform: translateX(-50%);
+      padding: 1rem;
+      border: 1px solid rgba(0, 229, 255, 0.45);
+      border-radius: var(--radius);
+      color: #eaffff;
+      background: rgba(6, 7, 10, 0.82);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(16px);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .terminal p {
+      margin: 0.42rem 0 0;
+      color: rgba(234, 255, 255, 0.78);
+      line-height: 1.5;
+    }
+
+    .prompt {
+      color: var(--accent);
+      margin-right: 0.35rem;
     }
 
     main {
       display: grid;
-      gap: 1.5rem;
+      gap: 0;
     }
 
-    .section-grid {
+    .band {
+      position: relative;
+      margin-inline: calc((100vw - min(var(--maxw), calc(100vw - 2rem))) / -2);
+      padding: clamp(3.2rem, 7vw, 6.4rem) max(1rem, calc((100vw - var(--maxw)) / 2));
+      border-top: 1px solid var(--line);
+    }
+
+    .band.alt {
+      background: rgba(255, 248, 237, 0.05);
+    }
+
+    .section-head {
       display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
       gap: 1.5rem;
-    }
-
-    .section-heading {
-      grid-column: span 12;
-      display: flex;
-      justify-content: space-between;
       align-items: end;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-head h2 {
+      margin-top: 0.55rem;
+      font-size: clamp(2rem, 5vw, 4.4rem);
+      line-height: 0.95;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .panel,
+    .tile,
+    .timeline-item,
+    .project,
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .panel {
+      padding: clamp(1.2rem, 2.5vw, 2rem);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
       gap: 1rem;
+      align-items: stretch;
     }
 
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-    }
-
-    .section-heading p {
-      max-width: 36rem;
+    .panel p,
+    .tile p,
+    .timeline-item p,
+    .project p,
+    .contact-card p {
       margin: 0;
       color: var(--muted);
       line-height: 1.7;
     }
 
-    .profile-card {
-      grid-column: span 7;
-      padding: 2rem;
-    }
-
-    .focus-card {
-      grid-column: span 5;
-      padding: 2rem;
-      background:
-        linear-gradient(180deg, rgba(34, 77, 122, 0.92), rgba(16, 44, 72, 0.97)),
-        var(--surface);
-      color: #edf6ff;
-    }
-
-    .focus-card p,
-    .focus-card li {
-      color: rgba(237, 246, 255, 0.84);
+    .panel h3,
+    .tile h3,
+    .timeline-item h3,
+    .project h3,
+    .contact-card h3 {
+      margin-bottom: 0.72rem;
+      font-size: 1.28rem;
+      line-height: 1.15;
     }
 
     .focus-list {
-      padding: 0;
-      margin: 1rem 0 0;
-      list-style: none;
       display: grid;
-      gap: 0.9rem;
+      gap: 0.75rem;
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
     }
 
     .focus-list li {
-      padding-left: 1rem;
-      border-left: 2px solid rgba(237, 246, 255, 0.24);
+      position: relative;
+      padding: 0.8rem 0.9rem 0.8rem 2.1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: var(--soft);
+      line-height: 1.55;
     }
 
-    .stats {
-      grid-column: span 12;
+    .focus-list li::before {
+      content: "";
+      position: absolute;
+      left: 0.9rem;
+      top: 1.25rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--accent-2);
+    }
+
+    .metric-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1rem;
     }
 
-    .stat {
-      padding: 1.5rem;
-      animation: rise 1000ms ease-out both;
-      position: relative;
-      overflow: hidden;
+    .tile {
+      min-height: 178px;
+      padding: 1.15rem;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
-    .stat::before {
-      content: "";
-      position: absolute;
-      inset: auto -10% -40% auto;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 127, 115, 0.14), transparent 70%);
+    .tile:hover,
+    .project:hover,
+    .contact-card:hover,
+    .timeline-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 229, 255, 0.5);
+      background: var(--surface-strong);
     }
 
-    .stat strong {
+    .metric-value {
       display: block;
+      margin-bottom: 0.48rem;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 2rem;
-      margin-bottom: 0.35rem;
-      position: relative;
-      z-index: 1;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 0.9;
+      color: var(--accent-2);
     }
 
-    .stat p {
-      position: relative;
-      z-index: 1;
+    .chip-row {
+      margin-top: 1rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      padding: 0 0.62rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: var(--soft);
+      font-size: 0.87rem;
+      font-weight: 600;
     }
 
     .timeline {
-      grid-column: span 12;
       display: grid;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     .timeline-item {
-      padding: 1.75rem 2rem;
       display: grid;
-      grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 1.3rem;
-      bottom: 1.3rem;
-      width: 4px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, var(--accent), rgba(34, 77, 122, 0.94));
+      grid-template-columns: minmax(130px, 180px) minmax(0, 1fr);
+      gap: 1.2rem;
+      padding: 1.2rem;
     }
 
     .timeline-item time {
-      display: inline-block;
-      font-weight: 600;
-      color: var(--accent-deep);
-      letter-spacing: 0.04em;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-size: 0.82rem;
-    }
-
-    .timeline-item .role {
-      margin-bottom: 0.65rem;
+      font-size: 0.8rem;
     }
 
     .project-grid,
     .contact-grid {
-      grid-column: span 12;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
 
-    .project-card,
-    .contact-card {
-      padding: 1.6rem;
-      transition:
-        transform 220ms ease,
-        box-shadow 220ms ease,
-        border-color 220ms ease;
+    .project {
+      display: grid;
+      align-content: start;
+      min-height: 325px;
+      padding: 1.2rem;
+      overflow: hidden;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
-    .project-card:hover,
-    .contact-card:hover,
-    .timeline-item:hover,
-    .stat:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 28px 65px rgba(28, 53, 79, 0.18);
-    }
-
-    .project-card h3,
-    .contact-card h3 {
-      margin: 0 0 0.75rem;
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: -0.03em;
-    }
-
-    .project-card p,
-    .contact-card p {
-      margin: 0;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .mini-label {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      color: var(--accent-deep);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .project-card ul {
-      margin: 1rem 0 0;
-      padding-left: 1.1rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .project-meta {
-      margin-top: 1rem;
-    }
-
-    .project-meta span {
-      border-color: var(--line);
-      background: rgba(255, 255, 255, 0.55);
-      color: var(--muted);
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 1rem;
-      color: var(--accent-deep);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .project-link:hover,
-    .project-link:focus-visible {
-      color: var(--cool);
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 1rem;
-      color: var(--accent-deep);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-link:hover,
-    .contact-link:focus-visible {
-      color: var(--cool);
-    }
-
-    .project-placeholder {
-      grid-column: span 12;
-      padding: 2rem;
-      border-style: dashed;
+    .project-art {
+      position: relative;
+      min-height: 118px;
+      margin: -1.2rem -1.2rem 1.1rem;
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(248, 252, 255, 0.94), rgba(233, 243, 250, 0.76));
-      text-align: center;
+        linear-gradient(130deg, var(--glow-a), transparent 34%),
+        linear-gradient(230deg, var(--glow-b), transparent 42%),
+        linear-gradient(20deg, var(--glow-c), transparent 46%),
+        rgba(255, 248, 237, 0.06);
     }
 
-    .scroll-reveal {
+    .project-art::before,
+    .project-art::after {
+      content: "";
+      position: absolute;
+      inset: 24% 10%;
+      border: 1px solid rgba(255, 248, 237, 0.24);
+      border-radius: var(--radius);
+      transform: skewX(-18deg);
+    }
+
+    .project-art::after {
+      inset: 42% 24% 18% 22%;
+      border-color: rgba(0, 229, 255, 0.5);
+      transform: skewX(-18deg) translateX(8%);
+    }
+
+    .project a,
+    .contact-card a,
+    .footer a {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .project a:hover,
+    .project a:focus-visible,
+    .contact-card a:hover,
+    .contact-card a:focus-visible,
+    .footer a:hover,
+    .footer a:focus-visible {
+      color: var(--accent-2);
+    }
+
+    details {
+      margin-top: 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 0.9rem 1rem;
+      font-weight: 700;
+    }
+
+    details ul {
+      margin: 0;
+      padding: 0 1.2rem 1rem 2rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .contact-card {
+      min-height: 230px;
+      padding: 1.2rem;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .footer {
+      padding: 2rem 0 0;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .reveal {
       opacity: 1;
       transform: none;
     }
 
-    .js-enhanced .scroll-reveal {
+    .js .reveal {
       opacity: 0;
-      transform: translateY(22px);
-      transition:
-        opacity 700ms ease,
-        transform 700ms ease;
+      transform: translateY(20px);
+      transition: opacity 700ms ease, transform 700ms ease;
     }
 
-    .js-enhanced .scroll-reveal.visible {
+    .js .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .footer {
-      padding: 2rem 0 1rem;
-      text-align: center;
+    :focus-visible {
+      outline: 2px solid var(--accent-2);
+      outline-offset: 3px;
     }
 
-    .footer a {
-      color: var(--accent-deep);
-      font-weight: 600;
-    }
-
-    @keyframes slide-down {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes float {
-      0%,
-      100% {
-        transform: translate3d(0, 0, 0);
-      }
-      50% {
-        transform: translate3d(0, -18px, 0);
-      }
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(0, 127, 115, 0.44);
-      }
-      70% {
-        box-shadow: 0 0 0 11px rgba(0, 127, 115, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(0, 127, 115, 0);
-      }
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    @media (max-width: 960px) {
+    @media (max-width: 1060px) {
       .hero,
-      .stats,
-      .project-grid,
-      .contact-grid,
-      .section-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .split,
+      .section-head {
+        grid-template-columns: 1fr;
       }
 
-      .section-grid > * {
-        min-width: 0;
+      .hero {
+        min-height: auto;
       }
 
-      .profile-card,
-      .focus-card,
-      .stats,
-      .section-heading,
-      .timeline,
-      .project-placeholder,
+      .hero-visual {
+        min-height: 610px;
+      }
+
+      .metric-grid,
+      .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(var(--maxw), calc(100% - 1rem));
+      }
+
+      .topbar {
+        position: relative;
+        top: auto;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+      }
+
+      .nav {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+      }
+
+      .nav a {
+        min-height: 2.2rem;
+        padding: 0 0.55rem;
+        font-size: 0.88rem;
+      }
+
+      h1 {
+        font-size: clamp(3.1rem, 18vw, 5.3rem);
+      }
+
+      .hero-visual {
+        min-height: 570px;
+      }
+
+      .portrait-stage {
+        width: min(70%, 250px);
+      }
+
+      .node {
+        width: 44%;
+        padding: 0.72rem;
+      }
+
+      .node.one,
+      .node.two {
+        top: 45%;
+      }
+
+      .terminal {
+        bottom: 25%;
+        width: min(78%, 330px);
+      }
+
+      .metric-grid,
       .project-grid,
       .contact-grid {
-        grid-column: 1 / -1;
-        width: 100%;
+        grid-template-columns: 1fr;
       }
 
       .timeline-item {
         grid-template-columns: 1fr;
       }
 
-      .section-heading p {
-        max-width: none;
-      }
-
-      .timeline-item::before {
-        left: 1.1rem;
-        right: 1.1rem;
-        top: 0;
-        bottom: auto;
-        width: auto;
-        height: 4px;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .page-shell {
-        width: min(var(--max-width), calc(100% - 1rem));
-      }
-
-      .topbar {
-        align-items: flex-start;
-        border-radius: 28px;
-        padding: 1rem;
-      }
-
-      .hero-card,
-      .panel,
-      .profile-card,
-      .focus-card,
-      .timeline-item,
-      .project-card,
-      .contact-card,
-      .project-placeholder,
-      .stat {
-        padding: 1.4rem;
-      }
-
-      .hero h1 {
-        max-width: none;
-      }
-
-      .nav {
-        gap: 0.75rem;
-        justify-content: flex-start;
-      }
-
-      .hero-kicker {
-        align-items: flex-start;
-      }
-
-      .identity-header {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .topbar {
-        position: static;
-        display: grid;
-        gap: 0.75rem;
-        border-radius: 24px;
-        padding: 0.9rem;
-      }
-
-      .brand {
-        font-size: 0.88rem;
-        letter-spacing: 0.06em;
-      }
-
-      .brand,
-      .nav {
+      .button {
         width: 100%;
       }
-
-      .nav {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.5rem;
-      }
-
-      .nav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 2.5rem;
-        padding: 0.45rem 0.5rem;
-        border: 1px solid rgba(16, 32, 51, 0.08);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.4);
-        font-size: 0.88rem;
-        text-align: center;
-      }
-
-      .hero {
-        gap: 1rem;
-      }
-
-      .hero-card {
-        padding: 1.35rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.4rem, 13vw, 3.6rem);
-        line-height: 0.98;
-      }
-
-      .headline-strip {
-        font-size: 0.95rem;
-        letter-spacing: 0.05em;
-      }
-
-      .hero-kicker,
-      .cta-row {
-        display: grid;
-        gap: 0.7rem;
-      }
-
-      .headline-strip,
-      .lede {
-        font-size: 1rem;
-      }
-
-      .live-pill,
-      .signal-chip,
-      .button,
-      .button-secondary {
-        width: 100%;
-      }
-
-      .button,
-      .button-secondary {
-        justify-content: center;
-      }
-
-      .signal-row,
-      .section-heading {
-        display: grid;
-        gap: 0.5rem;
-      }
-
-      .terminal-line {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        align-items: start;
-        gap: 0.45rem;
-      }
-
-      .signal-row,
-      .terminal-line {
-        justify-items: start;
-      }
-
-      .signal-row span {
-        text-align: left;
-      }
-
-      .contact-link,
-      .project-link {
-        display: inline;
-      }
     }
 
-    @media (max-width: 420px) {
-      .page-shell {
-        width: min(var(--max-width), calc(100% - 0.75rem));
-        padding-top: 0.75rem;
+    @media (max-width: 460px) {
+      .hero-visual {
+        min-height: 620px;
       }
 
-      .topbar,
-      .hero-card,
-      .panel,
-      .profile-card,
-      .focus-card,
-      .timeline-item,
-      .project-card,
-      .contact-card,
-      .project-placeholder,
-      .stat {
-        border-radius: 22px;
+      .node {
+        width: calc(100% - 2rem);
       }
 
-      .topbar {
-        padding: 0.8rem;
+      .node.one {
+        left: 1rem;
+        top: 42%;
       }
 
-      .nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .node.two {
+        right: 1rem;
+        top: 56%;
       }
 
-      .hero-card,
-      .panel,
-      .profile-card,
-      .focus-card,
-      .timeline-item,
-      .project-card,
-      .contact-card,
-      .project-placeholder,
-      .stat {
-        padding: 1.1rem;
+      .node.three,
+      .node.four {
+        display: none;
       }
 
-      .hero h1 {
-        font-size: clamp(1.85rem, 14vw, 2.7rem);
-      }
-
-      .eyebrow {
-        margin-bottom: 0.9rem;
-      }
-
-      .section-heading h2 {
-        font-size: clamp(1.8rem, 11vw, 2.4rem);
+      .terminal {
+        bottom: 1rem;
+        width: calc(100% - 2rem);
       }
     }
 
@@ -1185,268 +980,243 @@
         transition: none !important;
       }
 
-      .scroll-reveal {
-        opacity: 1;
-        transform: none;
+      .js .reveal {
+        opacity: 1 !important;
+        transform: none !important;
       }
     }
   </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "David Kornel",
+      "url": "https://kornys.github.io/",
+      "sameAs": [
+        "https://github.com/kornys",
+        "https://www.linkedin.com/in/david-kornel/",
+        "https://www.credly.com/users/david-kornel/badges#credly",
+        "https://sessionize.com/david-kornel/"
+      ],
+      "jobTitle": "Software Developer",
+      "worksFor": { "@type": "Organization", "name": "IBM" },
+      "description": "Software Developer at IBM and Senior Principal Software Quality Engineer focused on Kubernetes, OpenShift, DevOps, Java, automation, and quality engineering."
+    }
+  </script>
 </head>
 <body>
-  <div class="page-shell">
-    <div class="ambient-orb one" aria-hidden="true"></div>
-    <div class="ambient-orb two" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-meter" aria-hidden="true"></div>
+
+  <div class="shell">
     <header class="topbar">
-      <a class="brand" href="#top">David Kornel</a>
+      <a class="brand" href="#top" aria-label="David Kornel home">
+        <span class="brand-mark" aria-hidden="true">DK</span>
+        <span>David Kornel</span>
+      </a>
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#certifications">Certifications</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#now">Now</a>
         <a href="#contact">Contact</a>
-        <a href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
+      <button type="button" class="icon-button" id="theme-toggle" aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v2"></path>
+          <path d="M12 19v2"></path>
+          <path d="M5.64 5.64 7.05 7.05"></path>
+          <path d="M16.95 16.95 18.36 18.36"></path>
+          <path d="M3 12h2"></path>
+          <path d="M19 12h2"></path>
+          <path d="M5.64 18.36 7.05 16.95"></path>
+          <path d="M16.95 7.05 18.36 5.64"></path>
+          <circle cx="12" cy="12" r="4"></circle>
+        </svg>
+      </button>
     </header>
 
     <section class="hero" id="top">
-      <div class="hero-card">
-        <div class="eyebrow">David Kornel</div>
-        <h1>
-          Open source Java developer
-          <br>
-          <span>working on Kubernetes</span>
-          <br>
-          and OpenShift.
-        </h1>
-        <p class="headline-strip">Focused on GitOps, automation, and AI</p>
-        <div class="hero-kicker">
-          <div class="live-pill">
-            <span class="live-dot" aria-hidden="true"></span>
-            Software Developer at IBM
-          </div>
-          <div class="signal-chip">
-            Focus:
-            <span class="role-rotator" id="role-rotator">Kubernetes</span>
-          </div>
-        </div>
-        <p class="lede">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Open source + platform engineering</span>
+        <h1>Developer. Quality engineer. <span>Platform builder.</span></h1>
+        <p class="headline">
           I work mainly in open source, building and testing Java-based tooling around Kubernetes and OpenShift.
+        </p>
+        <p class="lede">
           Most of my public work happens through collaborative projects like StreamsHub, skodjob, Strimzi, and EnMasse,
           with a lot of focus on GitOps, automation, and platform reliability. Lately I have also been spending time on
           AI tooling and MCP, mainly from the Java side.
         </p>
         <div class="cta-row">
-          <a class="button" href="#experience">View experience</a>
-          <a class="button-secondary" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button primary" href="#projects">View public work</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="proof-row" aria-label="Profile highlights">
+          <span class="proof">Software Developer at IBM</span>
+          <span class="proof">Senior Principal SQE</span>
+          <span class="proof">Red Hat background</span>
+          <span class="proof">Brno, Czech Republic</span>
         </div>
       </div>
 
-      <div class="hero-side">
-        <aside class="panel hero-stack identity-panel">
-          <div class="identity-header">
-            <img
-              class="hero-avatar"
-              src="https://avatars.githubusercontent.com/u/11318335?v=4"
-              alt="Portrait of David Kornel"
-            >
-            <div class="identity-copy">
-              <h2>Engineering profile</h2>
-              <p>
-                Software Developer at IBM, Senior Principal Software Quality Engineer, and long-time open source contributor
-                focused on platform reliability, operator testing, and Java work around Kubernetes and OpenShift.
-              </p>
-            </div>
+      <aside class="hero-visual reveal" aria-label="Profile and engineering focus visual">
+        <div class="portrait-stage">
+          <div class="portrait-frame">
+            <img src="https://avatars.githubusercontent.com/u/11318335?v=4" alt="Portrait of David Kornel" width="290" height="290">
           </div>
-          <div class="fact-list">
-            <span class="fact-chip">IBM</span>
-            <span class="fact-chip">Red Hat background</span>
-            <span class="fact-chip">Brno, Czech Republic</span>
-          </div>
-          <div class="social-row">
-            <a class="social-link" href="https://github.com/kornys" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="social-link" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="social-link" href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">Credly</a>
-            <a class="social-link" href="https://twitter.com/Kornyss" target="_blank" rel="noreferrer">X / Twitter</a>
-          </div>
-          <div class="signal-board">
-            <div class="signal-row">
-              <strong>Open source work</strong>
-              <span>Most of my public work lives in shared upstream projects</span>
-            </div>
-            <div class="signal-row">
-              <strong>Quality gates</strong>
-              <span>Move feedback earlier and keep it practical</span>
-            </div>
-            <div class="signal-row">
-              <strong>Team flow</strong>
-              <span>Reduce friction across dev, test, and ops</span>
-            </div>
-            <div class="signal-row">
-              <strong>Current focus</strong>
-              <span>AI tooling, MCP, and Java-based integration work</span>
-            </div>
-          </div>
-        </aside>
-
-        <aside class="panel terminal-card">
-          <div class="terminal-bar" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <h2>What I focus on</h2>
-          <div class="badge-list">
-            <span class="badge">CI/CD</span>
-            <span class="badge">Automation</span>
-            <span class="badge">Release quality</span>
-            <span class="badge">Platform engineering</span>
-            <span class="badge">Developer experience</span>
-            <span class="badge">Cloud-native</span>
-            <span class="badge">AI / MCP</span>
-          </div>
-          <div class="terminal-line">
-            <span class="prompt">$</span>
-            <span class="text">design delivery paths teams can trust</span>
-          </div>
-          <div class="terminal-line">
-            <span class="prompt">$</span>
-            <span class="text">remove friction from build-test-release loops</span>
-          </div>
-          <div class="terminal-line active">
-            <span class="prompt">$</span>
-            <span class="text">keep quality visible in production-facing workflows</span>
-          </div>
-        </aside>
-      </div>
+        </div>
+        <div class="node one">
+          <strong>Kubernetes / OpenShift</strong>
+          <span>Operator testing, platform reliability, production-like validation.</span>
+        </div>
+        <div class="node two">
+          <strong>Java tooling</strong>
+          <span>Hands-on development around cloud-native workflows and automation.</span>
+        </div>
+        <div class="terminal">
+          <strong><span class="prompt">$</span>current_focus</strong>
+          <p>GitOps, automation, quality gates, AI tooling, MCP, and developer experience.</p>
+        </div>
+        <div class="node three">
+          <strong>Open source</strong>
+          <span>StreamsHub, skodjob, Strimzi, EnMasse.</span>
+        </div>
+        <div class="node four">
+          <strong>Delivery quality</strong>
+          <span>Fast feedback loops with practical release confidence.</span>
+        </div>
+      </aside>
     </section>
 
-    <main>
-      <section class="section-grid scroll-reveal" id="about">
-        <div class="section-heading">
-          <h2>Built for production.</h2>
+    <main id="main">
+      <section class="band" id="about">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">About</span>
+            <h2>Built for production.</h2>
+          </div>
           <p>
             My work sits at the intersection of software development, operations, and quality. I care about systems that
             are understandable, testable, and stable when people actually have to run them.
           </p>
         </div>
 
-        <article class="hero-card profile-card scroll-reveal">
-          <h3>Profile</h3>
-          <p>
-            I write software, build test tooling, and help shape the delivery side around it. A lot of my work has been in
-            Kubernetes and OpenShift environments, especially around operator testing, CI/CD, and production-like validation.
-            I tend to work where development, platform concerns, and release confidence meet.
-          </p>
-          <div class="chips">
-            <span class="chip">Kubernetes / OpenShift</span>
-            <span class="chip">Open source development</span>
-            <span class="chip">Cloud-native platforms</span>
-            <span class="chip">Hands-on development</span>
-            <span class="chip">Quality-driven delivery</span>
-            <span class="chip">Java development</span>
-            <span class="chip">AI / MCP</span>
-          </div>
-        </article>
+        <div class="split">
+          <article class="panel reveal">
+            <h3>Profile</h3>
+            <p>
+              I write software, build test tooling, and help shape the delivery side around it. A lot of my work has been in
+              Kubernetes and OpenShift environments, especially around operator testing, CI/CD, and production-like validation.
+              I tend to work where development, platform concerns, and release confidence meet.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Kubernetes / OpenShift</span>
+              <span class="chip">Open source development</span>
+              <span class="chip">Cloud-native platforms</span>
+              <span class="chip">Hands-on development</span>
+              <span class="chip">Quality-driven delivery</span>
+              <span class="chip">Java development</span>
+              <span class="chip">AI / MCP</span>
+            </div>
+          </article>
 
-        <article class="panel focus-card scroll-reveal">
-          <h3>How I add value</h3>
-          <ul class="focus-list">
-            <li>Reduce friction between development, testing, and operations.</li>
-            <li>Design workflows that make reliable releases easier, not slower.</li>
-            <li>Automate validation around Kubernetes platforms and operator-based systems.</li>
-            <li>Keep engineering quality visible through faster, more useful feedback loops.</li>
-          </ul>
-        </article>
-
-        <div class="stats">
-          <div class="stat scroll-reveal">
-            <strong data-count="4">4</strong>
-            <span class="mini-label">Key orgs</span>
-            <p>Most of my public work shows up through collaboration in StreamsHub, skodjob, Strimzi, and EnMasse.</p>
-          </div>
-          <div class="stat scroll-reveal">
-            <strong data-count="2015">2015</strong>
-            <span class="mini-label">GitHub since</span>
-            <p>Years of public engineering activity across development, testing, automation, and platform work.</p>
-          </div>
-          <div class="stat scroll-reveal">
-            <strong data-count="2">2</strong>
-            <span class="mini-label">Major chapters</span>
-            <p>Professional track shaped by Red Hat and continued today within IBM.</p>
-          </div>
+          <article class="panel reveal">
+            <h3>How I add value</h3>
+            <ul class="focus-list">
+              <li>Reduce friction between development, testing, and operations.</li>
+              <li>Design workflows that make reliable releases easier, not slower.</li>
+              <li>Automate validation around Kubernetes platforms and operator-based systems.</li>
+              <li>Keep engineering quality visible through faster, more useful feedback loops.</li>
+            </ul>
+          </article>
         </div>
       </section>
 
-      <section class="section-grid scroll-reveal" id="certifications">
-        <div class="section-heading">
-          <h2>Certifications</h2>
+      <section class="band alt" id="signals">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">Signals</span>
+            <h2>Signals at a glance.</h2>
+          </div>
+          <p>
+            Public collaboration, long-term engineering activity, certification depth, and a current technical direction
+            tied to cloud-native delivery work.
+          </p>
+        </div>
+
+        <div class="metric-grid">
+          <article class="tile reveal">
+            <strong class="metric-value" data-count="4">4</strong>
+            <h3>Core collaborations</h3>
+            <p>Public work across StreamsHub, skodjob, Strimzi, and EnMasse.</p>
+          </article>
+          <article class="tile reveal">
+            <strong class="metric-value" data-count="2015">2015</strong>
+            <h3>GitHub since</h3>
+            <p>Years of public engineering activity across development, testing, automation, and platform work.</p>
+          </article>
+          <article class="tile reveal">
+            <strong class="metric-value" data-count="2">2</strong>
+            <h3>Major chapters</h3>
+            <p>Professional track shaped by Red Hat and continued today within IBM.</p>
+          </article>
+          <article class="tile reveal">
+            <strong class="metric-value">RH</strong>
+            <h3>Certification track</h3>
+            <p>Red Hat certification path including architecture and OpenShift architecture.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="certifications">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">Certifications</span>
+            <h2>Verified platform credibility.</h2>
+          </div>
           <p>
             Professional credibility built through hands-on Red Hat certification tracks, public technical work, and
             ongoing badge-based learning. Architecture, OpenShift platform design, and cloud-native platforms are core areas.
           </p>
         </div>
 
-        <article class="hero-card profile-card scroll-reveal">
-          <h3>Red Hat certifications</h3>
-          <p>
-            I hold Red Hat certifications including Red Hat Certified Architect and Red Hat Certified OpenShift Architect.
-            Those certifications align directly with the platform, architecture, Kubernetes, OpenShift, and production-oriented
-            engineering work I do.
-          </p>
-          <div class="chips">
-            <span class="chip">Red Hat Certified Architect</span>
-            <span class="chip">Red Hat Certified OpenShift Architect</span>
-            <span class="chip">Platform architecture</span>
-            <span class="chip">Cloud-native systems</span>
-          </div>
-        </article>
-
-        <article class="panel focus-card scroll-reveal">
-          <h3>Learning profile</h3>
-          <ul class="focus-list">
-            <li>Strong interest in Kubernetes and broader cloud-native engineering.</li>
-            <li>Continuous learning reflected through certification paths and badge-based achievements.</li>
-            <li>Current investment in AI tooling, AI-assisted development, and Model Context Protocol workflows.</li>
-            <li>Professional profile designed to expand with verified badge links and deeper certification detail.</li>
-          </ul>
-        </article>
-
-        <div class="contact-grid">
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Verification</span>
-            <h3>Red Hat profile</h3>
+        <div class="split">
+          <article class="panel reveal">
+            <h3>Red Hat certifications</h3>
             <p>
-              Public verification is available through Red Hat Certification Central and shows a broader certification track.
+              I hold Red Hat certifications including Red Hat Certified Architect and Red Hat Certified OpenShift Architect.
+              Those certifications align directly with the platform, architecture, Kubernetes, OpenShift, and production-oriented
+              engineering work I do.
             </p>
-            <a class="contact-link" href="https://rhtapps.redhat.com/verify?certId=180-250-847" target="_blank" rel="noreferrer">
-              View Red Hat verification
-            </a>
+            <div class="chip-row">
+              <span class="chip">Red Hat Certified Architect</span>
+              <span class="chip">Red Hat Certified OpenShift Architect</span>
+              <span class="chip">Platform architecture</span>
+              <span class="chip">Cloud-native systems</span>
+            </div>
           </article>
 
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Badges</span>
-            <h3>Credly portfolio</h3>
-            <p>
-              Public badge portfolio covering certification-backed learning and professional achievements.
-            </p>
-            <a class="contact-link" href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">
-              View Credly badges
-            </a>
-          </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Current direction</span>
-            <h3>AI and MCP</h3>
-            <p>
-              Current exploration is focused on AI-native engineering workflows, practical automation, and building with MCP.
-            </p>
+          <article class="panel reveal">
+            <h3>Learning profile</h3>
+            <ul class="focus-list">
+              <li>Strong interest in Kubernetes and broader cloud-native engineering.</li>
+              <li>Continuous learning reflected through certification paths and badge-based achievements.</li>
+              <li>Current investment in AI tooling, AI-assisted development, and Model Context Protocol workflows.</li>
+              <li>Professional profile designed to expand with verified badge links and deeper certification detail.</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section class="section-grid scroll-reveal" id="experience">
-        <div class="section-heading">
-          <h2>Experience</h2>
+      <section class="band alt" id="experience">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">Experience</span>
+            <h2>Red Hat roots. IBM chapter.</h2>
+          </div>
           <p>
             Publicly visible experience shows a path through Red Hat into IBM, with long-running focus on reliability,
             operator testing, automation, and delivery quality in Kubernetes-centered environments.
@@ -1454,25 +1224,20 @@
         </div>
 
         <div class="timeline">
-          <article class="timeline-item scroll-reveal">
+          <article class="timeline-item reveal">
+            <time>Current</time>
             <div>
-              <time>Current</time>
-            </div>
-            <div>
-              <h3 class="role">IBM</h3>
+              <h3>IBM</h3>
               <p>
                 Continuing work across software development, engineering quality, and operational effectiveness.
                 The emphasis is on dependable delivery, strong feedback cycles, and engineering systems that remain healthy as they evolve.
               </p>
             </div>
           </article>
-
-          <article class="timeline-item scroll-reveal">
+          <article class="timeline-item reveal">
+            <time>Previously</time>
             <div>
-              <time>Previously</time>
-            </div>
-            <div>
-              <h3 class="role">Red Hat</h3>
+              <h3>Red Hat</h3>
               <p>
                 Built experience in environments where Kubernetes, OpenShift, platform reliability, and practical automation matter.
                 That background continues to shape how I approach release quality, operator testing, and engineering workflow design.
@@ -1482,9 +1247,12 @@
         </div>
       </section>
 
-      <section class="section-grid scroll-reveal" id="projects">
-        <div class="section-heading">
-          <h2>Projects</h2>
+      <section class="band" id="projects">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">Projects</span>
+            <h2>Public work with real context.</h2>
+          </div>
           <p>
             Most of my public code is collaborative open-source work rather than standalone personal repositories.
             The strongest examples sit across StreamsHub, skodjob, Strimzi, and EnMasse.
@@ -1492,110 +1260,124 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card scroll-reveal">
-            <span class="mini-label">Collaborative project</span>
+          <article class="project reveal">
+            <div class="project-art" aria-hidden="true"></div>
             <h3>kubetest4j</h3>
             <p>
               A library for testing Kubernetes deployments and operators using the Fabric8 API. It fits closely with the kind
               of cloud-native testing and validation work I spend most of my time on.
             </p>
-            <div class="project-meta">
-              <span>Java</span>
-              <span>Kubernetes</span>
-              <span>Operator testing</span>
+            <div class="chip-row">
+              <span class="chip">Java</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">Operator testing</span>
             </div>
-            <a class="project-link" href="https://github.com/skodjob/kubetest4j" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
+            <p><a href="https://github.com/skodjob/kubetest4j" target="_blank" rel="noreferrer">Open repository</a></p>
           </article>
 
-          <article class="project-card scroll-reveal">
-            <span class="mini-label">Collaborative project</span>
+          <article class="project reveal">
+            <div class="project-art" aria-hidden="true"></div>
             <h3>EnMasse</h3>
             <p>
               Self-service messaging on Kubernetes and OpenShift, and a good example of the messaging and platform work I
               contributed to in open source.
             </p>
-            <div class="project-meta">
-              <span>Java</span>
-              <span>Messaging</span>
-              <span>Kubernetes / OpenShift</span>
+            <div class="chip-row">
+              <span class="chip">Java</span>
+              <span class="chip">Messaging</span>
+              <span class="chip">Kubernetes / OpenShift</span>
             </div>
-            <a class="project-link" href="https://github.com/EnMasseProject/enmasse" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
+            <p><a href="https://github.com/EnMasseProject/enmasse" target="_blank" rel="noreferrer">Open repository</a></p>
           </article>
 
-          <article class="project-card scroll-reveal">
-            <span class="mini-label">Collaborative project</span>
-            <h3>automation-hub</h3>
+          <article class="project reveal">
+            <div class="project-art" aria-hidden="true"></div>
+            <h3>StreamsHub MCP</h3>
             <p>
-              An automation repository built around Ansible and Kubernetes deployments, reflecting the more operational side
-              of my open-source work.
+              Model Context Protocol servers that give AI assistants direct access to Kubernetes-based streaming infrastructure,
+              including Strimzi-managed Kafka environments.
             </p>
-            <div class="project-meta">
-              <span>Ansible</span>
-              <span>Kubernetes</span>
-              <span>Automation</span>
+            <div class="chip-row">
+              <span class="chip">Java</span>
+              <span class="chip">MCP</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">Strimzi</span>
             </div>
-            <a class="project-link" href="https://github.com/skodjob/automation-hub" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
+            <p><a href="https://github.com/streamshub/streamshub-mcp" target="_blank" rel="noreferrer">Open repository</a></p>
           </article>
         </div>
       </section>
 
-      <section class="section-grid scroll-reveal" id="contact">
-        <div class="section-heading">
-          <h2>Contact</h2>
+      <section class="band alt" id="now">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">Now</span>
+            <h2>Current technical direction.</h2>
+          </div>
           <p>
-            You can reach me through the public profiles below.
+            What I am currently building, studying, and connecting back into production-minded engineering work.
+          </p>
+        </div>
+
+        <div class="split">
+          <article class="panel reveal">
+            <h3>AI and MCP from the Java side</h3>
+            <p>
+              Current exploration is focused on AI-native engineering workflows, practical automation, AI-assisted development,
+              and Model Context Protocol workflows, mainly from the Java side.
+            </p>
+            <details>
+              <summary>Current focus areas</summary>
+              <ul>
+                <li>AI-enabled development workflows that stay useful and reviewable.</li>
+                <li>MCP patterns that reduce manual context-switching and improve automation speed.</li>
+                <li>Quality systems that improve signal in CI/CD without slowing teams down.</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Cloud-native reliability</h3>
+            <p>
+              Keeping a strong focus on Kubernetes and OpenShift resilience, observability, and sustainable platform operations.
+              The through-line is practical quality: feedback that helps teams make better release decisions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="contact">
+        <div class="section-head reveal">
+          <div>
+            <span class="mini-label">Contact</span>
+            <h2>Public profiles and verification.</h2>
+          </div>
+          <p>
+            You can reach me through the public profiles below. They cover code, professional context, certification badges,
+            and speaking activity.
           </p>
         </div>
 
         <div class="contact-grid">
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Primary</span>
-            <h3>GitHub profile</h3>
-            <p>
-              Public code, project history, and a direct technical profile anchored to your work.
-            </p>
-            <a class="contact-link" href="https://github.com/kornys" target="_blank" rel="noreferrer">
-              github.com/kornys
-            </a>
+          <article class="contact-card reveal">
+            <h3>GitHub</h3>
+            <p>Public code, project history, and a direct technical profile anchored to my work.</p>
+            <p><a href="https://github.com/kornys" target="_blank" rel="noreferrer">github.com/kornys</a></p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Professional</span>
+          <article class="contact-card reveal">
             <h3>LinkedIn</h3>
-            <p>
-              A stronger business-facing profile for outreach, networking, and role context.
-            </p>
-            <a class="contact-link" href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">
-              linkedin.com/in/david-kornel
-            </a>
+            <p>A business-facing profile for outreach, networking, and role context.</p>
+            <p><a href="https://www.linkedin.com/in/david-kornel/" target="_blank" rel="noreferrer">linkedin.com/in/david-kornel</a></p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Badges</span>
+          <article class="contact-card reveal">
             <h3>Credly</h3>
-            <p>
-              Public badge portfolio showing certifications and broader learning progress.
-            </p>
-            <a class="contact-link" href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">
-              credly.com/users/david-kornel
-            </a>
+            <p>Public badge portfolio covering certification-backed learning and professional achievements.</p>
+            <p><a href="https://www.credly.com/users/david-kornel/badges#credly" target="_blank" rel="noreferrer">credly.com/users/david-kornel</a></p>
           </article>
-
-          <article class="contact-card scroll-reveal">
-            <span class="mini-label">Speaking</span>
+          <article class="contact-card reveal">
             <h3>Sessionize</h3>
-            <p>
-              Public speaker profile with sessions centered on observability, reliable environments, and cloud-native engineering.
-            </p>
-            <a class="contact-link" href="https://sessionize.com/david-kornel/" target="_blank" rel="noreferrer">
-              sessionize.com/david-kornel
-            </a>
+            <p>Public speaker profile with sessions centered on observability, reliable environments, and cloud-native engineering.</p>
+            <p><a href="https://sessionize.com/david-kornel/" target="_blank" rel="noreferrer">sessionize.com/david-kornel</a></p>
           </article>
         </div>
       </section>
@@ -1608,26 +1390,57 @@
       </p>
     </footer>
   </div>
+
   <script>
     (() => {
-      document.documentElement.classList.add("js-enhanced");
+      document.documentElement.classList.add("js");
 
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const roleRotator = document.getElementById("role-rotator");
-      const roles = ["Kubernetes", "Cloud-native", "Quality Engineering", "AI / MCP"];
-      let roleIndex = 0;
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      if (roleRotator && !prefersReducedMotion) {
-        window.setInterval(() => {
-          roleIndex = (roleIndex + 1) % roles.length;
-          roleRotator.textContent = roles[roleIndex];
-        }, 1800);
+      if (storedTheme === "light" || storedTheme === "dark") {
+        root.setAttribute("data-theme", storedTheme);
+      } else if (prefersLight) {
+        root.setAttribute("data-theme", "light");
       }
 
-      const reveals = document.querySelectorAll(".scroll-reveal");
-      if (reveals.length) {
-        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-          reveals.forEach((element) => element.classList.add("visible"));
+      const updateThemeLabel = () => {
+        const mode = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+        themeToggle?.setAttribute("aria-label", `Current theme is ${mode}. Switch theme.`);
+      };
+
+      themeToggle?.addEventListener("click", () => {
+        const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        updateThemeLabel();
+      });
+      updateThemeLabel();
+
+      const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = max > 0 ? window.scrollY / max : 0;
+        root.style.setProperty("--progress", progress.toFixed(4));
+      };
+
+      updateProgress();
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+
+      if (!reducedMotion) {
+        window.addEventListener("pointermove", (event) => {
+          root.style.setProperty("--mx", `${event.clientX}px`);
+          root.style.setProperty("--my", `${event.clientY}px`);
+        }, { passive: true });
+      }
+
+      const revealItems = document.querySelectorAll(".reveal");
+      if (revealItems.length) {
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+          revealItems.forEach((item) => item.classList.add("visible"));
         } else {
           const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -1636,52 +1449,46 @@
                 observer.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.16 });
+          }, { threshold: 0.14 });
 
-          reveals.forEach((element) => observer.observe(element));
+          revealItems.forEach((item) => observer.observe(item));
         }
       }
 
       const counters = document.querySelectorAll("[data-count]");
-      if (counters.length) {
-        const animateCounter = (element) => {
-          const target = Number(element.dataset.count || "0");
-          const start = performance.now();
-          const duration = 900;
+      const runCounter = (element) => {
+        const target = Number(element.dataset.count || "0");
+        const start = performance.now();
+        const duration = 850;
 
-          const tick = (now) => {
-            const progress = Math.min((now - start) / duration, 1);
-            const value = Math.round(target * (1 - Math.pow(1 - progress, 3)));
-            element.textContent = String(value);
-            if (progress < 1) {
-              window.requestAnimationFrame(tick);
-            }
-          };
+        const frame = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          element.textContent = String(Math.round(target * eased));
 
-          window.requestAnimationFrame(tick);
+          if (progress < 1) {
+            window.requestAnimationFrame(frame);
+          }
         };
 
-        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-          counters.forEach((element) => animateCounter(element));
+        window.requestAnimationFrame(frame);
+      };
+
+      if (counters.length) {
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+          counters.forEach(runCounter);
         } else {
-          const counterObserver = new IntersectionObserver((entries) => {
+          const countObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
+                runCounter(entry.target);
+                countObserver.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.75 });
+          }, { threshold: 0.7 });
 
-          counters.forEach((element) => counterObserver.observe(element));
+          counters.forEach((counter) => countObserver.observe(counter));
         }
-      }
-
-      if (!prefersReducedMotion) {
-        window.addEventListener("pointermove", (event) => {
-          document.documentElement.style.setProperty("--spot-x", event.clientX + "px");
-          document.documentElement.style.setProperty("--spot-y", event.clientY + "px");
-        }, { passive: true });
       }
     })();
   </script>

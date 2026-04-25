@@ -8,3 +8,7 @@ The site is a static homepage with full control over the HTML and styling.
 
 - `index.html` contains the full landing page.
 - `_config.yml` keeps minimal site metadata.
+
+## Planning
+
+- `MODERNIZATION_PLAN.md` contains a detailed roadmap for a full visual and UX upgrade with AI image prompts.
